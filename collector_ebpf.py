@@ -1,8 +1,19 @@
 #!/usr/bin/env python3
+#!/usr/bin/env python3
 """
-collector.py -  
- 
+collector.py - eBPF-based event collector y hash detection
+
+# funcionalidades:
+# - Carga programa eBPF para monitorizar syscalls: execve, openat, write (>=1 KB)
+# - Captura metadatos (PID, PPID, UID/GID, comando, ruta, flags) y los emite en JSON
+# - Para execve: calcula y compara SHA‑256 contra base local/MalwareBazaar y termina procesos maliciosos
+# - Para openat: decodifica flags (RDONLY, CREAT, TRUNC, etc.)  
+# - Para write: acumula contadores de operaciones y bytes, con debug cada 100 eventos  
+# - Filtra ruido (p.ej. escrituras de tee o cat)  
+# - Soporta CLI: --verbose, --download-hashes, --no-hash, --dry-kill  
+# - Gestiona SIGINT/SIGTERM para limpieza de eBPF y estadísticas finales  
 """
+
 
 from bcc import BPF
 import json
