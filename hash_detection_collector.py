@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-hash_detection_collector.py 
+hash_detection_collector.py - FIXED for real MalwareBazaar download
+LeARN Fase Estática
 """
 
 import os
