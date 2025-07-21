@@ -1,8 +1,17 @@
 #!/usr/bin/env python3
+#!/usr/bin/env python3
 """
-hash_detection_collector.py - FIXED for real MalwareBazaar download
-LeARN Fase Estática
+hash_detection_collector.py - Detección estática de malware por hash
+
+# Funcionalidades principales:
+# - Mantiene una base de datos local (SQLite) de hashes SHA-256 maliciosos
+# - Permite añadir muestras de ejemplo o descargar hashes reales desde MalwareBazaar
+# - Escanea archivos o binarios de procesos, calcula su hash y verifica si es malware
+# - Incluye lógica para analizar múltiples rutas de binarios (ej. /proc/PID/exe, /usr/bin/…)
+# - Registra estadísticas de escaneo y detección (archivos, aciertos, errores)
+# - Incluye funciones de test para validar la detección y añadir muestras personalizadas
 """
+
 
 import os
 import hashlib
