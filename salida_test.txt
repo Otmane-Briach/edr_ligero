@@ -1,0 +1,253 @@
+edr@edr-VMware-Virtual-Platform:~/Desktop/mini-edr-ebpf$ ./testing_sistema.sh 
+================================================================================
+                    EDR SYSTEM PROFESSIONAL DEMONSTRATION                      
+================================================================================
+
+PHASE 1: ENVIRONMENT PREPARATION
+=================================
+
+-> Cleaning previous system state...
+   System state cleaned successfully
+
+-> Verifying system components...
+   [OK] collector.py found
+   [OK] hash_detection_collector.py found
+   [OK] hash_detection_detector.py found
+   All system components verified successfully
+
+-> Configuring threat intelligence database...
+   Downloading malware signatures from MalwareBazaar...
+   Initializing threat intelligence engine...
+Loaded 0 malware hashes to memory
+Setting up malware hash database...
+Loaded 4 malware hashes to memory
+Added 4 sample hashes
+Downloading MalwareBazaar CSV dataset...
+Fetching CSV from https://bazaar.abuse.ch/export/csv/recent/...
+Downloaded 335496 characters (CSV file)
+Debug row 0: SHA256='93cc8d99ed037de17a8a1b27b079c939e725132afe1ca823521e206e1e9336fa' (len=64)
+  Family raw: ' "n/a"'
+Debug row 1: SHA256='d0977353b0948561f64520eaaaca405a6bf9252b239dbad706a7da7e04332a45' (len=64)
+  Family raw: ' "n/a"'
+Debug row 2: SHA256='be1218126b862590810f4fac77f7d7714e6c089d85c17c04626d176d64b03709' (len=64)
+  Family raw: ' "n/a"'
+Debug row 3: SHA256='db639f3706dae61c3e150e894ee39c6ce411643ad35c5c30d1b1e970ccf7c1e6' (len=64)
+  Family raw: ' "n/a"'
+Debug row 4: SHA256='a956f7848bb3626451a6d07139d11a6792fe2d9fec95edd608f46ef37cd11bd6' (len=64)
+  Family raw: ' "QuasarRAT"'
+Successfully imported 765 hashes from MalwareBazaar
+Loaded 769 malware hashes to memory
+Hash database setup complete
+   Download completed in 0.1 seconds
+   Threat signatures loaded: 769
+   Database status: 769 signatures loaded
+   Threat intelligence configuration: COMPLETE
+
+PHASE 2: MALWARE SAMPLE PREPARATION
+====================================
+
+-> Creating EICAR test sample with executable wrapper...
+   Sample created: /tmp/edr_demo_1753055163/malware_sample.sh
+   SHA-256 hash: b9d271eeee01a7e010e17a40acfdeea2a534f305675372533c5348c4bd765143
+-> Registering EICAR sample in threat database...
+   EICAR sample confirmed in threat database
+   Detection capability: VERIFIED
+-> Creating additional malware samples for comprehensive testing...
+   Malware test samples prepared:
+      Primary (EICAR): b9d271eeee01a7e010e17a40acfdeea2a534f305675372533c5348c4bd765143
+      Secondary (CryptoLocker): 2a3cfd83b9cc2a4df0413f037517242f3e971a3ffed7ca860c1461388bd86f06
+   Sample preparation: COMPLETE
+
+PHASE 3: EDR SYSTEM INITIALIZATION
+===================================
+
+-> Starting EDR system with enhanced capabilities...
+   Active components:
+      * eBPF kernel-space monitoring (execve, openat, write syscalls)
+      * Dual hash detection engine (process + original file scanning)
+      * Behavioral analysis engine with anti-spam
+      * SQLite persistence layer
+      * Real-time threat termination
+   Component verification:
+      * collector.py (eBPF + dual hash scanning)
+      * hash_detection_detector.py (behavioral analysis + persistence)
+      * hash_detection_collector.py (enhanced dual scan engine)
+   EDR system initiated (Process ID: 13728)
+   Log files:
+      * JSON events: /tmp/edr_json.log
+      * Detection log: /tmp/edr_detector.log
+      * System errors: /tmp/edr_collector.err
+   Waiting for eBPF module compilation and system stabilization...
+.   eBPF modules compiled and loaded into kernel
+
+   EDR system status: OPERATIONAL
+   Monitoring active: Real-time syscall interception
+
+PHASE 4: MALWARE DETECTION VALIDATION
+======================================
+
+TEST 4.1: Hash-based malware detection
+---------------------------------------
+Objective: Validate immediate detection and termination of known malware
+Method: Execute EICAR sample with registered hash signature
+
+-> Executing primary malware sample...
+   File: /tmp/edr_demo_1753055163/malware_sample.sh
+   Expected behavior: Immediate detection and process termination
+   Hash in database: CONFIRMED
+   Dual scan capability: ACTIVE
+   Malware process ID: 13737
+   Monitoring detection response...
+/tmp/edr_demo_1753055163/malware_sample.sh: line 3: syntax error near unexpected token `P^'
+/tmp/edr_demo_1753055163/malware_sample.sh: line 3: `X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*'
+   Process status: AUTOMATICALLY TERMINATED BY EDR
+   Hash detection: SUCCESSFUL
+
+TEST 4.2: Secondary malware sample validation
+----------------------------------------------
+-> Executing secondary malware sample...
+/tmp/edr_demo_1753055163/crypto_ransomware.exe: line 1: This: command not found
+./testing_sistema.sh: line 230: 13740 Killed                  "$MALWARE2_FILE"
+   Secondary sample: Automatically terminated
+   Hash-based detection validation: COMPLETE
+
+PHASE 5: BEHAVIORAL ANALYSIS VALIDATION
+========================================
+
+TEST 5.1: Ransomware pattern detection
+---------------------------------------
+Objective: Detect rapid file creation with suspicious extensions
+Method: Create multiple files with .locked extension in sequence
+
+-> Simulating ransomware file encryption behavior...
+   Creating 7 files with .locked extension
+   Anti-spam mechanism should generate single alert
+   File creation simulation: COMPLETE
+   Expected: Single ransomware alert (anti-spam active)
+
+TEST 5.2: Suspicious network process detection
+-----------------------------------------------
+-> Executing network reconnaissance tools...
+   Network tools executed: netcat, curl, wget
+   Expected: Suspicious process alerts
+
+TEST 5.3: High-volume write operation detection
+------------------------------------------------
+-> Simulating intensive disk write operations...
+Intensive write simulation completed: 3MB in 60 write operations
+   Write operation simulation: COMPLETE
+   Expected: Write burst detection alert
+
+PHASE 6: EXTENDED MONITORING PERIOD
+====================================
+
+-> Initiating extended monitoring period...
+   Duration: 25 seconds
+   Purpose: Capture comprehensive event dataset
+   Monitoring: All syscalls and behavioral patterns
+   Monitoring progress: 25/25 seconds
+   Extended monitoring: COMPLETE
+
+PHASE 7: COMPREHENSIVE RESULTS ANALYSIS
+========================================
+
+-> Terminating monitoring processes...
+   All monitoring processes terminated
+
+ANALYSIS 7.1: Malware Detection Results
+---------------------------------------
+-> Hash-based malware detections:
+   ALERTA: MALWARE DETECTADO POR HASH: testing_sistema (PID 13737) - Familia: EICAR-Test-Professional - Fuente: Demo-System - Método: original_file
+   ALERTA: MALWARE DETECTADO POR HASH: testing_sistema (PID 13740) - Familia: CryptoLocker-Simulation - Fuente: Demo-System - Método: original_file
+   Total malware detections: 2
+   Hash detection system: OPERATIONAL
+
+-> Behavioral analysis results:
+   ALERTA: Archivo en ubicación sospechosa: /tmp/edr_collector.err
+   ALERTA: Archivo en ubicación sospechosa: /tmp/edr_demo_1753055163/malware_sample.sh
+   ALERTA: Archivo en ubicación sospechosa: /tmp/edr_demo_1753055163/malware_sample.sh
+   ALERTA: Archivo en ubicación sospechosa: /tmp/edr_demo_1753055163/crypto_ransomware.exe
+   ALERTA: Archivo en ubicación sospechosa: /tmp/edr_demo_1753055163/crypto_ransomware.exe
+   ALERTA: Archivo en ubicación sospechosa: /tmp/edr_demo_1753055163/crypto_ransomware.exe
+   ALERTA: Archivo en ubicación sospechosa: /tmp/edr_demo_1753055163/document_1.locked (Score: 8 - ubicación sospechosa, creación de archivo, extensión de ransomware, sobreescritura)
+   ALERTA: RANSOMWARE DETECTADO: 5 archivos creados en 10s (PID 13700, DIR /tmp/edr_demo_1753055163)
+   Total behavioral alerts: 12
+   Anti-spam mechanism: FUNCTIONAL (single ransomware alert)
+   Write burst detections: 1
+   Suspicious process alerts: 0
+
+-> System performance metrics:
+      Hash scans realizados: 47
+
+ANALYSIS 7.2: Database Persistence Verification
+------------------------------------------------
+-> Database analysis:
+   Database statistics:
+      Total events stored: 2461
+      Events with alerts: 14
+      Malware detections: 2
+      Hash scans performed: 47
+      EXEC events: 47
+      OPEN events: 2357
+      WRITE events: 57
+   Database persistence: OPERATIONAL
+
+   Detected malware families:
+      CryptoLocker-Simulation: 1 detection(s)
+      EICAR-Test-Professional: 1 detection(s)
+
+   Recent critical events:
+      2025-07-20 23:46:18 | curl | SUSPICIOUS ACTIVITY
+      2025-07-20 23:46:18 | curl | SUSPICIOUS ACTIVITY
+      2025-07-20 23:46:18 | python3 | SUSPICIOUS ACTIVITY
+      2025-07-20 23:46:18 | python3 | SUSPICIOUS ACTIVITY
+      2025-07-20 23:46:16 | testing_sistema | BEHAVIORAL ALERT
+      2025-07-20 23:46:14 | testing_sistema | SUSPICIOUS ACTIVITY
+      2025-07-20 23:46:11 | python3 | SUSPICIOUS ACTIVITY
+      2025-07-20 23:46:11 | testing_sistema | SUSPICIOUS ACTIVITY
+      2025-07-20 23:46:11 | testing_sistema | SUSPICIOUS ACTIVITY
+      2025-07-20 23:46:11 | testing_sistema | MALWARE: CryptoLocker-Simulation
+
+ANALYSIS 7.3: System Performance Assessment
+-------------------------------------------
+-> Event collection performance:
+   Total JSON events: 2592
+   EXEC events captured: 48
+   OPEN events captured: 2487
+   WRITE events captured: 57
+   Event collection: HIGH PERFORMANCE
+   System overhead: MINIMAL (eBPF kernel-space monitoring)
+
+-> Threat intelligence status:
+   Threat signatures: 771 loaded
+   Signature sources: MalwareBazaar + Custom samples
+
+PHASE 8: TECHNICAL VALIDATION SUMMARY
+======================================
+
+IMPLEMENTATION VERIFICATION:
+----------------------------
+   [PASS] Hash-based detection: FUNCTIONAL
+          Malware samples detected and logged
+   [PASS] Event persistence: FUNCTIONAL
+          Comprehensive event logging active
+   [PASS] System integration: FUNCTIONAL
+          Full pipeline operational
+   [PASS] Performance: HIGH EFFICIENCY
+          Real-time event processing confirmed
+
+COMPREHENSIVE METRICS:
+----------------------
+   Events processed: 2461
+   Malware detected: 2
+   Alerts generated: 14
+   Threat signatures: 771
+   System uptime: 25 seconds
+
+-> Performing system cleanup...
+   Cleanup completed successfully
+
+================================================================================
+                                   FIN DEMO                                     
+================================================================================
+edr@edr-VMware-Virtual-Platform:~/Desktop/mini-edr-ebpf$ 
