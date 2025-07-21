@@ -1,0 +1,767 @@
+#!/usr/bin/env python3
+"""
+hash_detection_detector.py 
+Umbrales realistas + debug mejorado + anti-spam 
+"""
+
+import sys
+import json
+import time
+import sqlite3
+import signal
+import os
+from collections import defaultdict, deque
+from dataclasses import dataclass
+from typing import Dict, List, Optional
+
+@dataclass
+class Event:
+    """Estructura para eventos con soporte hash detection"""
+    timestamp: float
+    pid: int
+    event_type: str
+    comm: str
+    path: Optional[str] = None
+    flags: Optional[int] = None
+    flags_decoded: Optional[str] = None
+    uid: Optional[int] = None
+    gid: Optional[int] = None
+    ppid: Optional[int] = None
+    # Campos para hash detection
+    malware_detected: Optional[bool] = None
+    file_hash: Optional[str] = None
+    malware_info: Optional[Dict] = None
+    scan_clean: Optional[bool] = None
+    scan_method: Optional[str] = None
+    # Campo para eventos WRITE
+    bytes_written: Optional[int] = None
+
+class ThreatDetectorFixed:
+    """Detector WRITE CORREGIDO con umbrales realistas"""
+    
+    def __init__(self):
+        self.running = True
+        
+        # Ventanas de tiempo (existentes)
+        self.file_windows = defaultdict(deque)
+        self.exec_windows = defaultdict(deque)
+        
+        # CORREGIDO: Contadores WRITE con reset menos agresivo
+        self.write_counters = {
+            'ops': defaultdict(int),     # Número de operaciones write
+            'bytes': defaultdict(int),   # Total bytes escritos
+            'last_reset': time.time()    # Para reset periódico
+        }
+        self.write_alerted = set()  # PIDs que ya han generado alerta WRITE
+        self.write_last_alert = {}  # Último timestamp de alerta por PID
+        
+        # ANTI-SPAM: Estados de alerta por PID + COOLDOWN por directorio
+        self.ransomware_alerted = set()
+        self.suspicious_location_alerted = set()
+        self.ransomware_dir_alerted = {}  # directorio -> timestamp
+        self.ransomware_cooldown = 60  # segundos
+
+        # Whitelist de procesos de sistema
+        self.whitelist_procs = {
+            "tracker-extract", "tracker-miner-f", "tracker-miner-fs", 
+            "systemd", "kworker", "ksoftirqd", "migration", "rcu_gp", "rcu_par_gp"
+        }
+        
+        # ahora sii: Umbrales WRITE REALISTAS para testing
+        self.config = {
+            "file_burst_threshold": 5,
+            "exec_burst_threshold": 3,
+            "time_window": 10,
+            # UMBRALES WRITE AJUSTADOS PARA TESTING
+            "write_ops_threshold": 50,            # 50 operaciones (era 500)
+            "write_bytes_threshold": 20*1024*1024,  # 20MB (era 100MB)
+            "write_reset_interval": 60,           # Reset cada 60s (era 30s)
+            "write_alert_cooldown": 30,           # 30s entre alertas del mismo PID
+            # Configuración existente
+            "suspicious_paths": {
+                "/tmp", "/var/tmp", "/dev/shm"
+            },
+            "critical_files": {
+                "/etc/passwd", "/etc/shadow", "/etc/sudoers",
+                "/etc/hosts", "/boot/grub/grub.cfg", "/etc/crontab"
+            },
+            "suspicious_processes": {
+                "nc", "ncat", "netcat", "curl", "wget", "nmap", 
+                "masscan", "nikto", "sqlmap", "metasploit"
+            },
+            "suspicious_extensions": {
+                ".locked", ".enc", ".crypt", ".encrypt", ".encrypted",
+                ".vault", ".crypto", ".secure", ".ransomed"
+            }
+        }
+        
+        # Estadísticas MEJORADAS con soporte WRITE
+        self.stats = {
+            "total_events": 0,
+            "alerts_by_type": defaultdict(int),
+            "hash_scans": 0,
+            "malware_detected": 0,
+            "clean_files": 0,
+            "top_processes": defaultdict(int),
+            "family_counts": defaultdict(int),
+            "start_time": time.time(),
+            "errors": 0,
+            "max_events_per_second": 0,
+            "events_this_second": 0,
+            "last_second": int(time.time()),
+            # Estadísticas WRITE
+            "write_events": 0,
+            "total_bytes_written": 0,
+            "write_alerts": 0,
+            "write_processes": set(),  # PIDs únicos que han hecho WRITE
+            "write_burst_checks": 0,   # DEBUG: cuántas veces se llamó _check_write_burst
+            "write_resets": 0          # DEBUG: cuántas veces se resetearon contadores
+        }
+        
+        # PERSISTENCIA SQLite con esquema corregido
+        self.setup_database()
+        
+        # Signal handlers
+        signal.signal(signal.SIGINT, self._signal_handler)
+        signal.signal(signal.SIGTERM, self._signal_handler)
+        signal.signal(signal.SIGPIPE, self._signal_handler)
+
+    def setup_database(self):
+        """Configurar base de datos de eventos con esquema corregido"""
+        try:
+            self.db_conn = sqlite3.connect("edr_events.db")
+            
+            # Verificar si la tabla existe
+            cursor = self.db_conn.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='events'")
+            table_exists = cursor.fetchone() is not None
+            
+            if not table_exists:
+                # Crear tabla completa con bytes_written incluido
+                self.db_conn.execute("""
+                    CREATE TABLE events(
+                        id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        timestamp REAL,
+                        pid INTEGER,
+                        ppid INTEGER,
+                        comm TEXT,
+                        event_type TEXT,
+                        path TEXT,
+                        flags INTEGER,
+                        flags_decoded TEXT,
+                        alert_level TEXT,
+                        alert_message TEXT,
+                        file_hash TEXT,
+                        malware_family TEXT,
+                        malware_source TEXT,
+                        scan_method TEXT,
+                        uid INTEGER,
+                        gid INTEGER,
+                        bytes_written INTEGER
+                    )
+                """)
+                print("Tabla events creada con esquema completo", file=sys.stderr)
+            else:
+                # Verificar si bytes_written existe
+                cursor = self.db_conn.execute("PRAGMA table_info(events)")
+                columns = [row[1] for row in cursor.fetchall()]
+                
+                if 'bytes_written' not in columns:
+                    # Añadir columna que falta
+                    self.db_conn.execute("ALTER TABLE events ADD COLUMN bytes_written INTEGER")
+                    print("Columna bytes_written añadida a tabla existente", file=sys.stderr)
+                else:
+                    print("Esquema de base de datos correcto", file=sys.stderr)
+            
+            # Crear índices
+            indexes = [
+                "CREATE INDEX IF NOT EXISTS idx_timestamp ON events(timestamp)",
+                "CREATE INDEX IF NOT EXISTS idx_pid ON events(pid)",
+                "CREATE INDEX IF NOT EXISTS idx_alert_level ON events(alert_level)",
+                "CREATE INDEX IF NOT EXISTS idx_malware ON events(malware_family)",
+                "CREATE INDEX IF NOT EXISTS idx_event_type ON events(event_type)"
+            ]
+            
+            for idx in indexes:
+                self.db_conn.execute(idx)
+            
+            self.db_conn.commit()
+            print("Base de datos SQLite configurada: edr_events.db", file=sys.stderr)
+            
+        except Exception as e:
+            print(f"Error configurando base de datos: {e}", file=sys.stderr)
+            self.db_conn = None
+        
+    def _signal_handler(self, signum, frame):
+        """Manejo de señales"""
+        self.running = False
+        self.print_final_stats()
+        self._cleanup_database()
+        sys.exit(0)
+        
+    def _cleanup_database(self):
+        """Limpiar conexión de base de datos"""
+        if self.db_conn:
+            try:
+                self.db_conn.commit()
+                self.db_conn.close()
+                print("Base de datos guardada y cerrada", file=sys.stderr)
+            except:
+                pass
+        
+    def analyze_event(self, event_data: dict) -> Optional[str]:
+        """Análisis de eventos COMPLETO + WRITE CORREGIDO"""
+        if not self.running:
+            return None
+            
+        try:
+            # Crear objeto Event con soporte WRITE
+            event = Event(
+                timestamp=event_data.get("timestamp", time.time()),
+                pid=event_data.get("pid", 0),
+                ppid=event_data.get("ppid", 0),
+                event_type=event_data.get("type", "UNKNOWN"),
+                comm=event_data.get("comm", "unknown"),
+                path=event_data.get("path", ""),
+                flags=event_data.get("flags", 0),
+                flags_decoded=event_data.get("flags_decoded", ""),
+                uid=event_data.get("uid", 0),
+                gid=event_data.get("gid", 0),
+                malware_detected=event_data.get("MALWARE_DETECTED", False),
+                file_hash=event_data.get("hash"),
+                malware_info=event_data.get("malware_info"),
+                scan_clean=event_data.get("scan_clean", False),
+                scan_method=event_data.get("scan_method", ""),
+                bytes_written=event_data.get("bytes_written", 0)
+            )
+            
+            # DEBUG: Log de eventos WRITE para verificar captura
+            if event.event_type == "WRITE":
+                print(f"DEBUG WRITE: PID {event.pid}, bytes: {event.bytes_written}", file=sys.stderr)
+
+            # PROCESO WRITE: Actualizar contadores antes de whitelist
+            if event.event_type == "WRITE":
+                self._process_write_event(event.pid, event.bytes_written or 0)
+
+            # WHITELIST: ignorar eventos de procesos ruidosos DESPUÉS de procesar WRITE
+            if event.comm in self.whitelist_procs:
+                self._update_stats_complete(event)
+                self._persist_event(event, None, None)
+                return None
+                
+            # Actualizar estadísticas mejoradas
+            self._update_stats_complete(event)
+            
+            # PRIORIDAD MÁXIMA: Hash detection de malware
+            alert_level = None
+            alert_message = None
+            
+            if event.malware_detected and event.malware_info:
+                family = event.malware_info.get("family", "Unknown")
+                source = event.malware_info.get("source", "Unknown")
+                method = event.scan_method or "unknown"
+                
+                alert_level = "CRITICAL"
+                alert_message = f"MALWARE DETECTADO POR HASH: {event.comm} (PID {event.pid}) - Familia: {family} - Fuente: {source} - Método: {method}"
+                
+                self.stats["alerts_by_type"]["malware_hash"] += 1
+                self.stats["family_counts"][family] += 1
+                
+            else:
+                # Análisis heurístico CON WRITE CORREGIDO
+                heuristic_alert = self._run_detection_rules_complete(event)
+                if heuristic_alert:
+                    if "RANSOMWARE" in heuristic_alert or "CRITICO" in heuristic_alert:
+                        alert_level = "ALERT"
+                    else:
+                        alert_level = "INFO"
+                    alert_message = heuristic_alert
+            
+            # Persistir evento en base de datos
+            self._persist_event(event, alert_level, alert_message)
+            
+            # Retornar alerta si existe
+            if alert_message:
+                return alert_message
+                
+            return None
+            
+        except Exception as e:
+            self.stats["errors"] += 1
+            print(f"DEBUG ERROR: {e}", file=sys.stderr)
+            return None
+
+    def _process_write_event(self, pid: int, bytes_written: int):
+        """procesar evento WRITE con ANTI-SPAM integrado y DEBUG"""
+        current_time = time.time()
+        
+        # reset periódico de contadores MENOS AGRESIVO
+        if current_time - self.write_counters['last_reset'] > self.config['write_reset_interval']:
+            # Log de reset para debug
+            old_ops = len(self.write_counters['ops'])
+            old_bytes = sum(self.write_counters['bytes'].values())
+            old_pids = set(self.write_counters['ops'].keys())
+            
+            self.write_counters['ops'].clear()
+            self.write_counters['bytes'].clear()
+            self.write_counters['last_reset'] = current_time
+            self.stats["write_resets"] += 1
+            
+            # NO limpiar anti-spam tan agresivamente
+            # self.write_alerted.clear()  # COMENTADO: permite que anti-spam persista
+            
+            print(f"DEBUG: Reset write counters #{self.stats['write_resets']}, había {old_ops} PIDs activos, {old_bytes:,} bytes", file=sys.stderr)
+            if old_ops > 0:
+                top_pids = sorted([(pid, self.write_counters['ops'].get(pid, 0)) for pid in list(old_pids)[:3]], key=lambda x: x[1], reverse=True)
+                print(f"  Top PIDs reseteados: {top_pids}", file=sys.stderr)
+        
+        # aactualizar contadores
+        self.write_counters['ops'][pid] += 1
+        self.write_counters['bytes'][pid] += bytes_written
+        
+        # actualizar estadísticas globales
+        self.stats["write_events"] += 1
+        self.stats["total_bytes_written"] += bytes_written
+        self.stats["write_processes"].add(pid)
+
+    def _check_write_burst(self, pid: int) -> Optional[str]:
+        """Detectar ráfaga de escrituras CON DEBUG MEJORADO"""
+        self.stats["write_burst_checks"] += 1
+        
+        ops = self.write_counters['ops'][pid]
+        bytes_total = self.write_counters['bytes'][pid]
+        current_time = time.time()
+        
+        # DEBUG: Log cada check significativo
+        if ops > 10 or bytes_total > 5*1024*1024:  # >10 ops o >5MB
+            print(f"DEBUG: _check_write_burst PID {pid}: {ops} ops, {bytes_total:,} bytes (umbral: {self.config['write_ops_threshold']} ops, {self.config['write_bytes_threshold']/1024/1024:.0f}MB)", file=sys.stderr)
+        
+        # Anti-spam por PID: verificar cooldown
+        if pid in self.write_alerted:
+            if self.stats["write_burst_checks"] % 100 == 0:  # Debug ocasional
+                print(f"DEBUG: PID {pid} ya alertado anteriormente (anti-spam)", file=sys.stderr)
+            return None  # Ya alertamos este PID, ignorar
+            
+        last_alert = self.write_last_alert.get(pid, 0)
+        if current_time - last_alert < self.config['write_alert_cooldown']:
+            return None  # En cooldown
+        
+        alert_triggered = False
+        alert_msg = None
+        
+        # Umbral de operaciones (REALISTA)
+        if ops >= self.config['write_ops_threshold']:
+            alert_msg = f"ESCRITURA INTENSIVA: {ops} operaciones, {bytes_total:,} bytes (PID {pid})"
+            alert_triggered = True
+            print(f"DEBUG: Alerta por OPERACIONES - PID {pid}: {ops} >= {self.config['write_ops_threshold']}", file=sys.stderr)
+        
+        # Umbral de bytes (REALISTA)
+        elif bytes_total >= self.config['write_bytes_threshold']:
+            alert_msg = f"ESCRITURA MASIVA: {bytes_total:,} bytes en {ops} operaciones (PID {pid})"
+            alert_triggered = True
+            print(f"DEBUG: Alerta por BYTES - PID {pid}: {bytes_total:,} >= {self.config['write_bytes_threshold']:,}", file=sys.stderr)
+        
+        if alert_triggered:
+            # Marcar PID como alertado
+            self.write_alerted.add(pid)
+            self.write_last_alert[pid] = current_time
+            self.stats["write_alerts"] += 1
+            print(f"DEBUG: ALERTA WRITE GENERADA - PID {pid}, total alertas: {self.stats['write_alerts']}", file=sys.stderr)
+            return alert_msg
+        
+        return None
+
+    def _update_stats_complete(self, event: Event):
+        """Actualizar estadísticas COMPLETAS"""
+        self.stats["total_events"] += 1
+        self.stats["top_processes"][event.comm] += 1
+        
+        # Estadísticas de hash
+        if event.file_hash:
+            self.stats["hash_scans"] += 1
+        if event.malware_detected:
+            self.stats["malware_detected"] += 1
+        if event.scan_clean:
+            self.stats["clean_files"] += 1
+            
+        # Calcular eventos por segundo (máximo)
+        current_second = int(time.time())
+        if current_second == self.stats["last_second"]:
+            self.stats["events_this_second"] += 1
+        else:
+            if self.stats["events_this_second"] > self.stats["max_events_per_second"]:
+                self.stats["max_events_per_second"] = self.stats["events_this_second"]
+            self.stats["events_this_second"] = 1
+            self.stats["last_second"] = current_second
+    
+    def _persist_event(self, event: Event, alert_level: str, alert_message: str):
+        """Persistir evento en base de datos"""
+        if not self.db_conn:
+            return
+            
+        try:
+            # Extraer información de malware
+            malware_family = None
+            malware_source = None
+            if event.malware_info:
+                malware_family = event.malware_info.get('family')
+                malware_source = event.malware_info.get('source')
+            
+            self.db_conn.execute("""
+                INSERT INTO events(
+                    timestamp, pid, ppid, comm, event_type, path, 
+                    flags, flags_decoded, alert_level, alert_message,
+                    file_hash, malware_family, malware_source, scan_method,
+                    uid, gid, bytes_written
+                )
+                VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+            """, (
+                event.timestamp, event.pid, event.ppid, event.comm, 
+                event.event_type, event.path, event.flags, event.flags_decoded,
+                alert_level, alert_message, event.file_hash, 
+                malware_family, malware_source, event.scan_method,
+                event.uid, event.gid, event.bytes_written
+            ))
+            
+            # Commit cada 50 eventos
+            if self.stats["total_events"] % 50 == 0:
+                self.db_conn.commit()
+                
+        except Exception as e:
+            print(f"DB Error: {e}", file=sys.stderr)
+    
+    def _run_detection_rules_complete(self, event: Event) -> Optional[str]:
+        """Reglas de detección COMPLETAS + WRITE CORREGIDO"""
+        
+        # PRIORIDAD: Check write burst para eventos WRITE
+        if event.event_type == "WRITE":
+            write_alert = self._check_write_burst(event.pid)
+            if write_alert:
+                self.stats["alerts_by_type"]["write_burst"] += 1
+                return write_alert
+        
+        # Reglas existentes (mantener como están)
+        if self._check_suspicious_process(event):
+            self.stats["alerts_by_type"]["suspicious_process"] += 1
+            return f"Proceso sospechoso: {event.comm} (PID {event.pid})"
+        
+        alert = self._check_critical_files(event)
+        if alert:
+            self.stats["alerts_by_type"]["critical_file"] += 1
+            return alert
+            
+        alert = self._check_file_burst_antispam(event)
+        if alert:
+            self.stats["alerts_by_type"]["file_burst"] += 1
+            return alert
+            
+        alert = self._check_exec_burst(event)
+        if alert:
+            self.stats["alerts_by_type"]["exec_burst"] += 1
+            return alert
+            
+        alert = self._check_suspicious_locations_improved(event)
+        if alert:
+            self.stats["alerts_by_type"]["suspicious_location"] += 1
+            return alert
+            
+        return None
+    
+    # MANTENER TODAS LAS FUNCIONES EXISTENTES SIN CAMBIOS
+    def _check_suspicious_process(self, event: Event) -> bool:
+        """Detección de procesos sospechosos"""
+        if event.event_type != "EXEC":
+            return False
+            
+        comm_lower = event.comm.lower()
+        return comm_lower in self.config["suspicious_processes"]
+    
+    def _check_critical_files(self, event: Event) -> Optional[str]:
+        """Detección de acceso a archivos críticos"""
+        if event.event_type != "OPEN" or not event.path:
+            return None
+            
+        if event.path in self.config["critical_files"]:
+            if event.flags and (event.flags & 0x1 or event.flags & 0x2):  # WRITE flags
+                return f"CRITICO: Modificación archivo sistema: {event.path}"
+            else:
+                return f"Acceso archivo crítico: {event.path}"
+                
+        return None
+    
+    def _check_file_burst_antispam(self, event: Event) -> Optional[str]:
+        """Detección de ráfagas de archivos CON ANTI-SPAM GLOBAL"""
+        if event.event_type != "OPEN":
+            return None
+            
+        if not event.flags or not (event.flags & 0x40):  # O_CREAT
+            return None
+        
+        # Requerir extensión de ransomware para reducir falsos positivos
+        if not (event.path and any(event.path.endswith(ext) for ext in self.config["suspicious_extensions"])):
+            return None
+
+        current_time = event.timestamp
+        pid = event.pid
+        
+        # Limpiar ventana
+        window = self.file_windows[pid]
+        while window and current_time - window[0] > self.config["time_window"]:
+            window.popleft()
+            
+        # Añadir evento
+        window.append(current_time)
+        
+        # Verificar umbral
+        if len(window) >= self.config["file_burst_threshold"]:
+            # Anti-spam por PID
+            if pid not in self.ransomware_alerted:
+                # Anti-spam por directorio (cooldown global)
+                dirpath = os.path.dirname(event.path) if event.path else "/tmp"
+                last_alert = self.ransomware_dir_alerted.get(dirpath, 0)
+                
+                if current_time - last_alert > self.ransomware_cooldown:
+                    self.ransomware_alerted.add(pid)
+                    self.ransomware_dir_alerted[dirpath] = current_time
+                    return f"RANSOMWARE DETECTADO: {len(window)} archivos creados en {self.config['time_window']}s (PID {pid}, DIR {dirpath})"
+                else:
+                    self.ransomware_alerted.add(pid)
+            
+        return None
+    
+    def _check_exec_burst(self, event: Event) -> Optional[str]:
+        """Detección de ráfagas de ejecución"""
+        if event.event_type != "EXEC":
+            return None
+            
+        current_time = event.timestamp
+        pid = event.pid
+        
+        window = self.exec_windows[pid]
+        while window and current_time - window[0] > self.config["time_window"]:
+            window.popleft()
+            
+        window.append(current_time)
+        
+        if len(window) >= self.config["exec_burst_threshold"]:
+            return f"Ráfaga ejecuciones: {len(window)} procesos en {self.config['time_window']}s (PID {pid})"
+            
+        return None
+    
+    def _check_suspicious_locations_improved(self, event: Event) -> Optional[str]:
+        """Detección de ubicaciones sospechosas MEJORADA con scoring"""
+        if event.event_type != "OPEN" or not event.path:
+            return None
+            
+        # Verificar ubicación sospechosa
+        is_suspicious_location = False
+        for suspicious_path in self.config["suspicious_paths"]:
+            if event.path.startswith(suspicious_path):
+                is_suspicious_location = True
+                break
+                
+        if not is_suspicious_location:
+            return None
+            
+        # Scoring system
+        score = 0
+        reasons = []
+        
+        # +2 puntos: Archivo en ubicación sospechosa
+        score += 2
+        reasons.append("ubicación sospechosa")
+        
+        # +3 puntos: Flag CREATE
+        if event.flags and event.flags & 0x40:  # O_CREAT
+            score += 3
+            reasons.append("creación de archivo")
+            
+        # +2 puntos: Extensión sospechosa
+        if any(event.path.endswith(ext) for ext in self.config["suspicious_extensions"]):
+            score += 2
+            reasons.append("extensión de ransomware")
+            
+        # +1 punto: Flag TRUNC (sobreescritura)
+        if event.flags and event.flags & 0x200:  # O_TRUNC
+            score += 1
+            reasons.append("sobreescritura")
+            
+        # Alertar solo si score >= 4 y no hemos alertado ya este PID
+        if score >= 4:
+            pid = event.pid
+            if pid not in self.suspicious_location_alerted:
+                self.suspicious_location_alerted.add(pid)
+                reason_str = ", ".join(reasons)
+                return f"Archivo en ubicación sospechosa: {event.path} (Score: {score} - {reason_str})"
+            
+        # Score bajo: alerta simple
+        elif score >= 2:
+            return f"Archivo en ubicación sospechosa: {event.path}"
+            
+        return None
+    
+    def print_stats(self):
+        """Mostrar estadísticas en tiempo real con DEBUG WRITE"""
+        try:
+            uptime = time.time() - self.stats["start_time"]
+            rate = self.stats["total_events"] / uptime if uptime > 0 else 0
+            total_alerts = sum(self.stats["alerts_by_type"].values())
+            active_write_pids = len(self.write_counters['ops'])
+            
+            print(f"Eventos: {self.stats['total_events']} | "
+                  f"Alertas: {total_alerts} | "
+                  f"WRITE: {self.stats['write_events']}({self.stats['write_alerts']} alertas) | "
+                  f"PIDs activos: {active_write_pids} | "
+                  f"Rate: {rate:.1f}/s", file=sys.stderr)
+        except Exception:
+            pass
+    
+    def print_final_stats(self):
+        """Estadísticas finales COMPLETAS CON DEBUG WRITE"""
+        print("\n" + "="*60, file=sys.stderr)
+        print("ESTADISTICAS FINALES - DETECTOR WRITE CORREGIDO", file=sys.stderr)
+        
+        uptime = time.time() - self.stats["start_time"]
+        rate = self.stats["total_events"] / uptime if uptime > 0 else 0
+        total_alerts = sum(self.stats["alerts_by_type"].values())
+        
+        print(f"Tiempo ejecución: {uptime:.1f} segundos", file=sys.stderr)
+        print(f"Total eventos: {self.stats['total_events']}", file=sys.stderr)
+        print(f"Rate promedio: {rate:.1f} eventos/segundo", file=sys.stderr)
+        print(f"Rate máximo: {self.stats['max_events_per_second']} eventos/segundo", file=sys.stderr)
+        print(f"Total alertas: {total_alerts}", file=sys.stderr)
+        
+        # Estadísticas WRITE detalladas CON DEBUG
+        print(f"\n EVENTOS WRITE CORREGIDOS:", file=sys.stderr)
+        print(f"   Eventos WRITE: {self.stats['write_events']}", file=sys.stderr)
+        print(f"   Bytes escritos totales: {self.stats['total_bytes_written']:,}", file=sys.stderr)
+        print(f"   Alertas por escritura: {self.stats['write_alerts']}", file=sys.stderr)
+        print(f"   Procesos únicos con WRITE: {len(self.stats['write_processes'])}", file=sys.stderr)
+        print(f"   Checks de burst realizados: {self.stats['write_burst_checks']}", file=sys.stderr)
+        print(f"   Resets de contadores: {self.stats['write_resets']}", file=sys.stderr)
+        
+        # Configuración actual
+        print(f"\n  CONFIGURACIÓN WRITE:", file=sys.stderr)
+        print(f"   Umbral operaciones: {self.config['write_ops_threshold']}", file=sys.stderr)
+        print(f"   Umbral bytes: {self.config['write_bytes_threshold']:,} ({self.config['write_bytes_threshold']/1024/1024:.0f}MB)", file=sys.stderr)
+        print(f"   Reset interval: {self.config['write_reset_interval']}s", file=sys.stderr)
+        print(f"   Alert cooldown: {self.config['write_alert_cooldown']}s", file=sys.stderr)
+        
+        # Estado de contadores activos
+        active_pids = len(self.write_counters['ops'])
+        if active_pids > 0:
+            print(f"\n CONTADORES ACTIVOS AL FINAL:", file=sys.stderr)
+            print(f"   PIDs activos WRITE: {active_pids}", file=sys.stderr)
+            # Top PIDs más activos
+            sorted_pids = sorted(self.write_counters['ops'].items(), key=lambda x: x[1], reverse=True)[:5]
+            for pid, ops in sorted_pids:
+                bytes_total = self.write_counters['bytes'][pid]
+                print(f"      PID {pid}: {ops} ops, {bytes_total:,} bytes", file=sys.stderr)
+        
+        # Análisis de eficiencia WRITE
+        if self.stats['write_events'] > 0:
+            avg_bytes = self.stats['total_bytes_written'] / self.stats['write_events']
+            alert_rate = (self.stats['write_alerts'] / self.stats['write_events']) * 100
+            print(f"\n ANÁLISIS WRITE:", file=sys.stderr)
+            print(f"   Promedio bytes/write: {avg_bytes:.1f}", file=sys.stderr)
+            print(f"   Tasa de alerta WRITE: {alert_rate:.4f}%", file=sys.stderr)
+            
+            if self.stats['write_alerts'] == 0 and self.stats['write_events'] > 100:
+                print(f"    SIN ALERTAS: Umbrales muy altos o anti-spam muy agresivo", file=sys.stderr)
+            elif self.stats['write_alerts'] > 0:
+                print(f"   ALERTAS GENERADAS: Sistema funcionando", file=sys.stderr)
+        
+        # Resto de estadísticas 
+        print(f"\n OTRAS MÉTRICAS:", file=sys.stderr)
+        print(f"   Hash scans realizados: {self.stats['hash_scans']}", file=sys.stderr)
+        print(f"   Malware detectado: {self.stats['malware_detected']}", file=sys.stderr)
+        print(f"   Archivos limpios: {self.stats['clean_files']}", file=sys.stderr)
+        print(f"   Errores: {self.stats['errors']}", file=sys.stderr)
+        
+        if self.stats["alerts_by_type"]:
+            print("\n Alertas por tipo:", file=sys.stderr)
+            for alert_type, count in self.stats["alerts_by_type"].items():
+                print(f"   {alert_type}: {count}", file=sys.stderr)
+                
+        # Diagnóstico automático mejorado
+        print(f"\n DIAGNÓSTICO AUTOMÁTICO:", file=sys.stderr)
+        if self.stats['write_alerts'] > 50:
+            print(f"     Muchas alertas WRITE ({self.stats['write_alerts']})", file=sys.stderr)
+            print(f"     Considera subir umbrales", file=sys.stderr)
+        elif self.stats['write_alerts'] == 0 and self.stats['write_events'] > 100:
+            print(f"     Sin alertas WRITE con {self.stats['write_events']} eventos", file=sys.stderr)
+            if self.stats['write_burst_checks'] == 0:
+                print(f"   PROBLEMA: _check_write_burst nunca se ejecutó", file=sys.stderr)
+            elif self.stats['write_burst_checks'] < self.stats['write_events'] / 10:
+                print(f"     Pocos checks de burst ({self.stats['write_burst_checks']})", file=sys.stderr)
+            else:
+                print(f"   Umbrales conservadores funcionando ({self.stats['write_burst_checks']} checks)", file=sys.stderr)
+        elif self.stats['write_alerts'] > 0:
+            print(f"    Alertas WRITE controladas ({self.stats['write_alerts']})", file=sys.stderr)
+        else:
+            print(f"    Pocos eventos WRITE para evaluar ({self.stats['write_events']})", file=sys.stderr)
+        
+        print("="*60, file=sys.stderr)
+
+def main():
+    """Función principal CORREGIDA"""
+    detector = ThreatDetectorFixed()
+    
+    print("EDR Threat Detector WRITE CORREGIDO iniciado", file=sys.stderr)
+    print("Mejoras implementadas:", file=sys.stderr)
+    print("   • UMBRALES REALISTAS: 50 ops, 20MB", file=sys.stderr)
+    print("   • Debug mejorado para WRITE", file=sys.stderr)
+    print("   • Anti-spam menos agresivo", file=sys.stderr)
+    print("   • Reset cada 60s (menos frecuente)", file=sys.stderr)
+    print("   • Esquema DB corregido automáticamente", file=sys.stderr)
+    print("Configuración:", file=sys.stderr)
+    print(f"   WRITE umbral: >{detector.config['write_ops_threshold']} ops o >{detector.config['write_bytes_threshold']//1024//1024}MB", file=sys.stderr)
+    print(f"   Reset interval: {detector.config['write_reset_interval']}s", file=sys.stderr)
+    print("-" * 60, file=sys.stderr)
+    
+    line_count = 0
+    
+    try:
+        for line in sys.stdin:
+            if not detector.running:
+                break
+                
+            try:
+                line = line.strip()
+                if not line:
+                    continue
+                    
+                event = json.loads(line)
+                alert = detector.analyze_event(event)
+                
+                if alert:
+                    print(f"ALERTA: {alert}")
+                    sys.stdout.flush()
+                
+                line_count += 1
+                
+                # Stats cada 200 eventos (menos spam)
+                if line_count % 200 == 0:
+                    detector.print_stats()
+                    
+            except json.JSONDecodeError:
+                detector.stats["errors"] += 1
+                continue
+            except BrokenPipeError:
+                break
+            except Exception as e:
+                detector.stats["errors"] += 1
+                print(f"Error procesando evento: {e}", file=sys.stderr)
+                continue
+    
+    except KeyboardInterrupt:
+        pass
+    except BrokenPipeError:
+        pass
+    finally:
+        detector.running = False
+        detector._cleanup_database()
+    
+    detector.print_final_stats()
+
+if __name__ == "__main__":
+    main()
