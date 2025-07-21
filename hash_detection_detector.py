@@ -1,8 +1,17 @@
 #!/usr/bin/env python3
+#!/usr/bin/env python3
 """
-hash_detection_detector.py 
-Umbrales realistas + debug mejorado + anti-spam 
+hash_detection_detector.py - Detector avanzado con umbrales realistas y anti-spam
+
+# Funcionalidades clave:
+# - Detección de escritura intensiva con umbrales ajustados (50 ops o 20MB) y anti-spam por PID
+# - Análisis heurístico por ubicaciones sospechosas usando sistema de puntuación (composite scoring)
+# - Identificación de patrones ransomware por extensión y ráfagas de creación de archivos
+# - Registro completo de eventos en base de datos SQLite, incluyendo hash, permisos, y bytes escritos
+# - Soporte para detección por hash desde análisis externo (MalwareBazaar)
+# - Estadísticas detalladas, debug de eventos WRITE y diagnóstico automático
 """
+
 
 import sys
 import json
