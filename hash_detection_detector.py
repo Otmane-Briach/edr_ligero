@@ -327,7 +327,7 @@ class ProcessScoreTracker:
             if len(unique_indicators) >= 3:
                 current_score += self.scoring_rules['cooccurrence']
                 if verbose:
-                    print(f"  +1 bonus co-ocurrencia → {current_score:.1f}/{self.alert_threshold}", file=sys.stderr)
+                    print(f"  +1 bonus co-ocurrencia  {current_score:.1f}/{self.alert_threshold}", file=sys.stderr)
             
             # Verificar umbral
             if current_score >= self.alert_threshold and pid not in self.alerted_pids:
