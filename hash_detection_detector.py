@@ -2124,7 +2124,7 @@ class ThreatDetectorFixed:
                 self.killed_pids.add(pid)
                 self.stats["response_kills"] += 1
                 action_taken = True
-                print(f"🔴 RESPONSE KILL: Proceso {comm} (PID {pid}) terminado - Score: {score}", file=sys.stderr)
+                print(f"RESPONSE KILL: Proceso {comm} (PID {pid}) terminado - Score: {score}", file=sys.stderr)
                 
         # BLOCK MODE: Suspender si score >= umbral block
         elif self.response_mode in ['block', 'kill'] and score >= self.response_thresholds['block']:
@@ -2133,7 +2133,7 @@ class ThreatDetectorFixed:
                     self.blocked_pids.add(pid)
                     self.stats["response_blocks"] += 1
                     action_taken = True
-                    print(f"🟡 RESPONSE BLOCK: Proceso {comm} (PID {pid}) suspendido - Score: {score}", file=sys.stderr)
+                    print(f" RESPONSE BLOCK: Proceso {comm} (PID {pid}) suspendido - Score: {score}", file=sys.stderr)
                     
         return action_taken
     
