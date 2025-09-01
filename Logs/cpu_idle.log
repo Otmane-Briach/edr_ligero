@@ -35,7 +35,7 @@ DESGLOSE EDR:
 
 OVERHEAD ABSOLUTO:          11.22%
 
-⚠ RESULTADO: NECESITA OPTIMIZACIÓN (>5% overhead)
+
 
 =========================================
 ✓ BENCHMARK IDLE COMPLETADO
@@ -43,5 +43,3 @@ OVERHEAD ABSOLUTO:          11.22%
 Resumen guardado en: benchmark_results/idle/summary.txt
 Datos CSV en: benchmark_results/idle/
 
-Próximo paso: 3_benchmark_compile.sh
-edr@edr-VMware-Virtual-Platform:~/Desktop/mini-edr-ebpf$ 
