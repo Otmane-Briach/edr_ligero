@@ -1,0 +1,47 @@
+edr@edr-VMware-Virtual-Platform:~/Desktop/mini-edr-ebpf$ ./benchmark.sh 
+=========================================
+BENCHMARK IDLE - OVERHEAD DEL EDR
+=========================================
+Duración: ~3 minutos total
+=========================================
+Verificando dependencias...
+
+[1/4] Limpieza inicial...
+[sudo] password for edr: 
+
+[2/4] BASELINE - Sistema sin EDR
+  Muestra 1/1 (30 segundos)...
+
+[3/4] TEST - Sistema con EDR activo
+  Muestra 1/1 (30 segundos)...
+  Iniciando EDR...
+  PIDs detectados - Collector: 28851, Detector: 28852
+    10/30: Collector=0.0% Detector=11.5% (PIDs: 28851,28852)
+    20/30: Collector=0.0% Detector=12.2% (PIDs: 28851,28852)
+    30/30: Collector=0.0% Detector=12.2% (PIDs: 28851,28852)
+  Deteniendo EDR...
+
+[4/4] ANÁLISIS DE RESULTADOS
+=========================================
+RESULTADOS PROMEDIO:
+-------------------
+Sistema Base (sin EDR):     4.75% CPU usado
+Sistema con EDR:            24.72% CPU usado
+
+DESGLOSE EDR:
+  Collector (eBPF):         0.05%
+  Detector (Python):        11.17%
+  TOTAL EDR:                11.22%
+
+OVERHEAD ABSOLUTO:          11.22%
+
+⚠ RESULTADO: NECESITA OPTIMIZACIÓN (>5% overhead)
+
+=========================================
+✓ BENCHMARK IDLE COMPLETADO
+=========================================
+Resumen guardado en: benchmark_results/idle/summary.txt
+Datos CSV en: benchmark_results/idle/
+
+Próximo paso: 3_benchmark_compile.sh
+edr@edr-VMware-Virtual-Platform:~/Desktop/mini-edr-ebpf$ 
