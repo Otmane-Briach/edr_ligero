@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """
 hash_detection_detector.py 
-Umbrales realistas + debug mejorado + anti-spam 
-ARREGLADO: Error de sintaxis en stats
 """
 
 import sys
@@ -92,7 +90,7 @@ class ProcessScoreTracker:
             'window_events': deque()
         })
         
-        # Scoring EXACTO según tu documento a Florina
+      
         self.scoring_rules = {
             # +3 PUNTOS: Alta prevalencia (>80%) y especificidad (<2% FP)
             'locked_files_burst': 3,      # >5 archivos .locked en 10s
@@ -134,7 +132,7 @@ class ProcessScoreTracker:
             
         }
         
-        self.alert_threshold = 8  # Umbral según tu documento
+        self.alert_threshold = 8  
         self.time_window = 10      # Ventana de 10 segundos
         self.decay_window = 30 
         self.alerted_pids = set()  # Anti-spam
@@ -188,7 +186,7 @@ class ProcessScoreTracker:
             age = event_time - e[0]
             if age <= self.decay_window:  # Mantener hasta 30s con decay
                 # e = (timestamp, indicator, points_originales, weight_actual)
-                if len(e) == 3:  # Formato antiguo, añadir weight
+                if len(e) == 3:  
                     new_window.append((e[0], e[1], e[2], 1.0))
                 else:
                     new_window.append(e)
@@ -290,7 +288,7 @@ class ProcessScoreTracker:
             if verbose:
                 print(f"DEBUG INDICATOR: {indicator} para PID {pid}", file=sys.stderr)
             
-            # Response inmediato para indicadores críticos (mantener como está)
+            # Response inmediato para indicadores críticos
             CRITICAL_INDICATORS = {'locked_files_burst', 'unlink_burst', 'massive_write'}
             if indicator in CRITICAL_INDICATORS:
                 if False:  # Mantener tu lógica actual
@@ -311,7 +309,7 @@ class ProcessScoreTracker:
                 elif age <= self.decay_window:  # 20-30s: 40%
                     weight = 0.4
                 else:
-                    continue  # No debería pasar si limpiamos bien
+                    continue  
                 
                 weighted_points = e[2] * weight
                 current_score += weighted_points
@@ -377,7 +375,7 @@ class ThreatDetectorFixed:
         self.exec_windows = defaultdict(deque)
 
         # Sistema de scoring unificado
-        self.score_tracker = ProcessScoreTracker(self)  # <-- AÑADIR self aquí
+        self.score_tracker = ProcessScoreTracker(self)  
         self.verbose_scoring = os.environ.get('EDR_VERBOSE_SCORING', '0') == '1'
 
         # Response Engine Configuration
@@ -436,7 +434,7 @@ class ThreatDetectorFixed:
         self.mass_deletion_alerted = set()  # PIDs alertados por borrado masivo
         self.privilege_escalation_alerted = set()  # PIDs alertados por chmod sospechoso
 
-        # CORREGIDO: Contadores WRITE con reset menos agresivo
+        # Contadores WRITE con reset menos agresivo
         self.write_counters = {
             'ops': defaultdict(int),     # Número de operaciones write
             'bytes': defaultdict(int),   # Total bytes escritos
@@ -509,7 +507,7 @@ class ThreatDetectorFixed:
                 0o777:  "WORLD_ALL",  # World writable/executable
                 0o666:  "WORLD_RW"    # World readable/writable
             },
-            # NUEVO: Archivos de persistencia
+            # Archivos de persistencia
             "persistence_files": {
                 "/etc/crontab", "/etc/cron.d/", "/var/spool/cron/",
                 "/etc/systemd/system/", "/lib/systemd/system/", 
@@ -524,7 +522,7 @@ class ThreatDetectorFixed:
 
         }
         
-        # Estadísticas MEJORADAS con soporte WRITE - ARREGLADO
+        # Estadísticas 
         self.stats = {
             "total_events": 0,
             "alerts_by_type": defaultdict(int),
@@ -786,7 +784,7 @@ class ThreatDetectorFixed:
             
             self.timing_metrics['events_processed_until_alert'] += 1
 
-            # AÑADIR ESTO: Actualizar comm si tenemos URL de wget/curl
+            # Actualizar comm si tenemos URL de wget/curl
             if event.url and event.event_type == "EXEC":
                 # El path contiene el ejecutable real
                 if event.path:
@@ -803,11 +801,11 @@ class ThreatDetectorFixed:
             if event.event_type == "EXEC":
                 self.process_tree.add_process(event.pid, event.ppid, event.comm)
             
-            # BORRAME, DEBUG: Ver si llegan URLs
+            # DEBUG: Ver si llegan URLs
             if event.event_type == "EXEC" and event.comm in ['wget', 'curl']:
                 print(f"DEBUG DETECTOR: {event.comm} url='{getattr(event, 'url', 'NO_URL')}'", file=sys.stderr)
             
-            # NUEVO: Pasar PPID al score tracker para todos los eventos
+            # Pasar PPID al score tracker para todos los eventos
             if hasattr(event, 'ppid') and event.ppid:
                 # Asegurar que el árbol conoce esta relación
                 if event.pid not in self.process_tree.tree:
@@ -905,8 +903,8 @@ class ThreatDetectorFixed:
                 self.stats["alerts_by_type"]["malware_hash"] += 1
                 self.stats["family_counts"][family] += 1
                 
-            else:#Si no hay hash positivo → pasar a heurísticas
-                # Análisis heurístico CON WRITE CORREGIDO
+            else:#Si no hay hash positivo -> pasar a heurísticas
+                # Análisis heurístico 
                 heuristic_alert = self._run_detection_rules_complete(event)
                 if heuristic_alert:
                     if "RANSOMWARE" in heuristic_alert or "CRITICO" in heuristic_alert:
@@ -968,7 +966,7 @@ class ThreatDetectorFixed:
         """procesar evento WRITE con ANTI-SPAM integrado y DEBUG"""
         current_time = time.time()
         
-        # reset periódico de contadores MENOS AGRESIVO
+        #reset periódico de contadores MENOS AGRESIVO
         #Si ha pasado más tiempo que write_reset_interval (configurable, por ejemplo, 60s), se resetean los contadores.
         if current_time - self.write_counters['last_reset'] > self.config['write_reset_interval']:
             # Log de reset para debug
@@ -1105,14 +1103,12 @@ class ThreatDetectorFixed:
                 event.uid, 
                 event.gid, 
                 event.bytes_written,
-                # NUEVOS CAMPOS
                 getattr(event, 'operation', None),  # Para UNLINK
                 getattr(event, 'mode', None),  # Para CHMOD
                 getattr(event, 'mode_decoded', None),  # Permisos decodificados
                 1 if getattr(event, 'suspicious_deletion', False) else 0,  # Boolean as int
                 1 if getattr(event, 'suspicious_chmod', False) else 0,  # Boolean as int
                 suspicious_reasons_json,  # JSON array de razones
-                # NUEVOS CAMPOS
                 getattr(event, 'ptrace_request', None),
                 getattr(event, 'ptrace_decoded', None),
                 getattr(event, 'mmap_prot', None),
@@ -1160,124 +1156,134 @@ class ThreatDetectorFixed:
     def _run_detection_rules_complete(self, event: Event) -> Optional[str]:
         """Reglas de detección COMPLETAS + WRITE CORREGIDO"""
 
-        # PRIMERO: Detectar doble extensión en CUALQUIER evento
+        # detectar_doble_extension: Detectar doble extensión en cualquier evento
         alert = self._check_double_extension_pattern(event)
         if alert:
             return alert
-        
-        # Añadir:
+
+        # detectar_read_write: Detectar patrones sospechosos de lectura/escritura
         alert = self._check_read_write_pattern(event)
         if alert:
             return alert
+
+        # detectar_ransomware: Detectar comportamiento típico de ransomware
         alert = self._check_ransomware_behavior(event)
         if alert:
             return alert
-        # NUEVO: Detección específica de botnets
+
+        # detectar_botnet_pattern: Detección específica de descargas de Mirai u otras botnets
         alert = self._check_mirai_download_pattern(event)
         if alert:
             self.stats["alerts_by_type"]["botnet_pattern"] += 1
             return alert
         
-        # PRIORIDAD: Check write burst para eventos WRITE
+        # detectar_write_burst: Escritura masiva (5MB o 50+ writes) en eventos WRITE
         if event.event_type == "WRITE":
-            write_alert = self._check_write_burst(event.pid) #miramos si es 5mb o + de 50 writes 
+            write_alert = self._check_write_burst(event.pid)
             if write_alert:
                 self.stats["alerts_by_type"]["write_burst"] += 1
                 return write_alert
         
-        # EXEC procesos que no deberían correr en el sistema
+        # detectar_proceso_sospechoso: Procesos que no deberían correr en el sistema
         if self._check_suspicious_process(event):
             self.stats["alerts_by_type"]["suspicious_process"] += 1
             return f"Proceso sospechoso: {event.comm} (PID {event.pid})"
         
-        # OPEN rchiovos criticos a los que no se deberia accder
+        # detectar_critical_file: Acceso a archivos críticos prohibidos
         alert = self._check_critical_files(event)
         if alert:
             self.stats["alerts_by_type"]["critical_file"] += 1
             return alert
             
+        # detectar_file_burst: Antispam de múltiples accesos/creaciones de ficheros
         alert = self._check_file_burst_antispam(event)
         if alert:
             self.stats["alerts_by_type"]["file_burst"] += 1
             return alert
         
-        # AÑADIR DESPUÉS:
-        #alert = self._check_directory_scan(event)  # NUEVO
-        #if alert:
-        #    self.stats["alerts_by_type"]["directory_scan"] += 1
-        #    return alert
+        # detectar_directory_scan: Exploración masiva de directorios
+        # alert = self._check_directory_scan(event)  # NUEVO
+        # if alert:
+        #     self.stats["alerts_by_type"]["directory_scan"] += 1
+        #     return alert
             
+        # detectar_exec_burst: Ejecución masiva de procesos
         alert = self._check_exec_burst(event)
         if alert:
             self.stats["alerts_by_type"]["exec_burst"] += 1
             return alert
             
+        # detectar_suspicious_location: Ejecución desde ubicaciones sospechosas
         alert = self._check_suspicious_locations_improved(event)
         if alert:
             self.stats["alerts_by_type"]["suspicious_location"] += 1
             return alert
         
-        # NUEVAS DETECCIONES
+        # detectar_mass_deletion: Borrado masivo de archivos
         alert = self._check_mass_deletion(event)
         if alert:
             self.stats["alerts_by_type"]["mass_deletion"] += 1
             return alert
         
+        # detectar_privilege_escalation: Intentos de escalada de privilegios
         alert = self._check_privilege_escalation(event)
         if alert:
             self.stats["alerts_by_type"]["privilege_escalation"] += 1
             return alert
-        #NUEVO: Detección de chmod burst
+
+        # detectar_chmod_burst: Cambios de permisos masivos por el mismo padre
         alert = self._check_chmod_burst_by_parent(event)
         if alert:
             self.stats["alerts_by_type"]["chmod_burst"] += 1
             return alert
 
-        # NUEVO: Detección multi-arquitectura
+        # detectar_multi_arch: Archivos multi-arquitectura sospechosos
         alert = self._check_multi_arch_files(event)
         if alert:
             self.stats["alerts_by_type"]["multi_arch"] += 1
             return alert
         
-        # NUEVAS DETECCIONES
+        # detectar_network_suspicious: Actividad de red sospechosa
         alert = self._check_network_suspicious(event)
         if alert:
             self.stats["alerts_by_type"]["network_suspicious"] += 1
             return alert
             
+        # detectar_process_injection: Inyecciones de procesos
         alert = self._check_process_injection(event)
         if alert:
             self.stats["alerts_by_type"]["process_injection"] += 1
             return alert
             
+        # detectar_memory_execution: Ejecución directa en memoria
         alert = self._check_memory_execution(event)
         if alert:
             self.stats["alerts_by_type"]["memory_execution"] += 1
             return alert
             
+        # detectar_ownership_manipulation: Manipulación de propietarios de ficheros
         alert = self._check_ownership_manipulation(event)
         if alert:
             self.stats["alerts_by_type"]["ownership_manipulation"] += 1
             return alert
         
+        # detectar_persistence: Intentos de persistencia en el sistema
         alert = self._check_persistence_attempt(event)
         if alert:
             self.stats["alerts_by_type"]["persistence"] += 1
             return alert
         
-        # DETECCIÓN DE BOTNETS
+        # detectar_download_execute: Cadena descarga + ejecución (botnets, malware)
         alert = self._check_download_execute_chain(event)
         if alert:
             self.stats["alerts_by_type"]["download_execute"] += 1
             return alert
 
+        # detectar_rapid_fork: Creación rápida y masiva de procesos (fork bomb)
         alert = self._check_rapid_forks(event)
         if alert:
             self.stats["alerts_by_type"]["rapid_fork"] += 1
             return alert
-
-        
-        
 
         return None
     
@@ -1406,7 +1412,6 @@ class ThreatDetectorFixed:
         if re.search(whitelist_second_ext, event.path.lower()):
             return None
         
-        # Tu patrón original está bien
          
         double_ext_pattern = r'\.(txt|doc|pdf|jpg|jpeg|png|csv|sql|db|xls|xlsx|ppt|pptx|vmdk|vmem)\.[a-z0-9_]{1,30}$'
         
@@ -1596,7 +1601,6 @@ class ThreatDetectorFixed:
         if pid in self.mass_deletion_alerted:
             return None
         
-        #mantener esto?
         if current_time - self.deletion_patterns['last_reset'] > self.config["deletion_time_window"] * 2:  # e.g., doble ventana
             self.deletion_patterns['user_files'].clear()
             self.deletion_patterns['last_reset'] = current_time
@@ -2392,7 +2396,7 @@ class ThreatDetectorFixed:
             if self.blocked_pids:
                 print(f"   PIDs bloqueados activos: {list(self.blocked_pids)}", file=sys.stderr)
 
-        print(f"\n🌳 PROCESS TREE:", file=sys.stderr)
+        print(f"\n PROCESS TREE:", file=sys.stderr)
         suspicious_families = [(pid, info) for pid, info in self.process_tree.tree.items() 
                               if info['score'] > 0 or len(info.get('connections', [])) > 0]
         if suspicious_families:
@@ -2403,7 +2407,7 @@ class ThreatDetectorFixed:
                         print(f"      → {conn['ip']}:{conn['port']}", file=sys.stderr)
 
         # MÉTRICAS DE TIEMPO PARA ANÁLISIS
-        print(f"\n📊 MÉTRICAS DE DETECCIÓN:", file=sys.stderr)
+        print(f"\n MÉTRICAS DE DETECCIÓN:", file=sys.stderr)
         if self.timing_metrics['ransomware_detection_time']:
             time_to_detect = self.timing_metrics['ransomware_detection_time'] - self.timing_metrics['first_event_time']
             print(f"   Tiempo hasta detección ransomware: {time_to_detect:.3f}s", file=sys.stderr)
