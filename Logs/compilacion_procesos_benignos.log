@@ -1,0 +1,3111 @@
+Esquema de base de datos ya completo
+Base de datos SQLite configurada: edr_events.db
+Esquema final: 33 columnas en tabla events
+EDR Threat Detector WRITE CORREGIDO iniciado
+Mejoras implementadas:
+   • UMBRALES REALISTAS: 50 ops, 20MB
+   • Debug mejorado para WRITE
+   • Anti-spam menos agresivo
+   • Reset cada 60s (menos frecuente)
+   • Esquema DB corregido automáticamente
+   • ERROR SINTAXIS ARREGLADO
+Configuración:
+   WRITE umbral: >50 ops o >20MB
+   Reset interval: 60s
+METRICS::FIRST_EVENT::1756687851.6710625
+DEBUG WRITE: PID 3079, bytes: 2342
+DEBUG MIRAI CHECK: comm=bash, url='', has_url=True
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 189 | Alertas: 0 | WRITE: 2(0 alertas) | PIDs activos: 1 | Rate: 28.9/s
+DEBUG INDICATOR: o_trunc para PID 34209
+SCORING PID 34209: 1.0/8 pts @ 3.607s [decay: o_trunc(+1*1.0)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 2.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 3.613s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 3.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 4.226s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 4.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 5.003s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 5.645s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+Eventos: 377 | Alertas: 0 | WRITE: 4(0 alertas) | PIDs activos: 1 | Rate: 38.2/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2343
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 565 | Alertas: 0 | WRITE: 9(0 alertas) | PIDs activos: 1 | Rate: 35.8/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 14.491s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 16.310s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 6016, bytes: 282624
+DEBUG WRITE: PID 6016, bytes: 3672
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 17.896s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+Eventos: 753 | Alertas: 0 | WRITE: 14(0 alertas) | PIDs activos: 2 | Rate: 35.8/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 20.021s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 21.506s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.30 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 24.509s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+Eventos: 944 | Alertas: 0 | WRITE: 19(0 alertas) | PIDs activos: 3 | Rate: 34.3/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 26.945s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 1132 | Alertas: 0 | WRITE: 23(0 alertas) | PIDs activos: 3 | Rate: 36.5/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 28.622s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 31.116s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 31.117s [decay: chmod_burst(+2*1.0)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 32.199s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+METRICS::FIRST_ALERT::32.201::events=1242
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 1320 | Alertas: 5 | WRITE: 26(0 alertas) | PIDs activos: 3 | Rate: 36.7/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 34.705s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+METRICS::FIRST_SUSPICIOUS::35.499
+DEBUG INDICATOR: unlink_burst para PID 34209
+DEBUG CAP: o_trunc limitado: 9.30 → 1.00
+SCORING PID 34209: 4.0/8 pts @ 35.499s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 1511 | Alertas: 9 | WRITE: 32(0 alertas) | PIDs activos: 3 | Rate: 35.5/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 11 ops, 16,200 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: unlink_burst para PID 34209
+DEBUG CAP: o_trunc limitado: 5.50 → 1.00
+SCORING PID 34209: 6.1/8 pts @ 46.251s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+Eventos: 1699 | Alertas: 9 | WRITE: 39(0 alertas) | PIDs activos: 3 | Rate: 34.1/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 12 ops, 17,900 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 6016, bytes: 319488
+DEBUG WRITE: PID 6016, bytes: 1928
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 13 ops, 19,600 bytes (umbral: 50 ops, 20MB)
+DB: Guardados 13 UNLINK, 5 CHMOD
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 14 ops, 21,300 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 1887 | Alertas: 9 | WRITE: 48(0 alertas) | PIDs activos: 3 | Rate: 33.6/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 15 ops, 23,000 bytes (umbral: 50 ops, 20MB)
+DB: Guardados 15 UNLINK, 5 CHMOD
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 16 ops, 24,700 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: unlink_burst para PID 34209
+DEBUG CAP: o_trunc limitado: 1.60 → 1.00
+SCORING PID 34209: 7.3/8 pts @ 57.199s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), unlink_burst(+3*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG: Reset write counters #1, había 3 PIDs activos, 711,357 bytes
+  Top PIDs reseteados: [(6016, 0), (34209, 0), (3079, 0)]
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 2075 | Alertas: 9 | WRITE: 57(0 alertas) | PIDs activos: 2 | Rate: 33.2/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2343
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 2263 | Alertas: 9 | WRITE: 62(0 alertas) | PIDs activos: 2 | Rate: 32.9/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2343
+DEBUG WRITE: PID 3079, bytes: 2427
+Eventos: 2454 | Alertas: 9 | WRITE: 65(0 alertas) | PIDs activos: 2 | Rate: 34.1/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 2642 | Alertas: 9 | WRITE: 67(0 alertas) | PIDs activos: 2 | Rate: 35.4/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 2830 | Alertas: 9 | WRITE: 69(0 alertas) | PIDs activos: 2 | Rate: 36.3/s
+DEBUG INDICATOR: o_trunc para PID 34209
+SCORING PID 34209: 4.3/8 pts @ 75.686s [decay: unlink_burst(+3*0.4), unlink_burst(+3*0.7), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 154624
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 2.00 → 1.00
+SCORING PID 34209: 3.1/8 pts @ 76.699s [decay: unlink_burst(+3*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 801792
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 3.00 → 1.00
+SCORING PID 34209: 2.2/8 pts @ 77.256s [decay: unlink_burst(+3*0.4), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 169984
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 4.00 → 1.00
+SCORING PID 34209: 2.2/8 pts @ 78.389s [decay: unlink_burst(+3*0.4), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 722944
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.00 → 1.00
+SCORING PID 34209: 2.2/8 pts @ 79.319s [decay: unlink_burst(+3*0.4), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 413696
+DEBUG WRITE: PID 34209, bytes: 564224
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 3018 | Alertas: 9 | WRITE: 79(0 alertas) | PIDs activos: 2 | Rate: 36.1/s
+DEBUG WRITE: PID 34209, bytes: 912384
+DEBUG: _check_write_burst PID 34209: 11 ops, 3,746,448 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 765952
+DEBUG: _check_write_burst PID 34209: 12 ops, 4,512,400 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 572416
+DEBUG: _check_write_burst PID 34209: 13 ops, 5,084,816 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 681984
+DEBUG: _check_write_burst PID 34209: 14 ops, 5,766,800 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 465920
+DEBUG: _check_write_burst PID 34209: 15 ops, 6,232,720 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.70 → 1.00
+SCORING PID 34209: 2.2/8 pts @ 85.798s [decay: unlink_burst(+3*0.4), o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 766976
+DEBUG: _check_write_burst PID 34209: 16 ops, 6,999,696 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.40 → 1.00
+SCORING PID 34209: 2.2/8 pts @ 87.181s [decay: unlink_burst(+3*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 534528
+DEBUG: _check_write_burst PID 34209: 17 ops, 7,534,224 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 88.448s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 120832
+DEBUG: _check_write_burst PID 34209: 18 ops, 7,655,056 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 3209 | Alertas: 9 | WRITE: 89(0 alertas) | PIDs activos: 2 | Rate: 34.9/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 89.823s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 891904
+DEBUG: _check_write_burst PID 34209: 19 ops, 8,546,960 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2344
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 3397 | Alertas: 9 | WRITE: 94(0 alertas) | PIDs activos: 2 | Rate: 34.9/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2344
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 99.196s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 100.578s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 3585 | Alertas: 9 | WRITE: 98(0 alertas) | PIDs activos: 2 | Rate: 34.4/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 103.288s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2344
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 3773 | Alertas: 9 | WRITE: 103(0 alertas) | PIDs activos: 2 | Rate: 33.9/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.30 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 109.080s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 112.506s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 114.010s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+Eventos: 3961 | Alertas: 9 | WRITE: 107(0 alertas) | PIDs activos: 2 | Rate: 33.7/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 114.949s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 115.574s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 116.414s [decay: chmod_burst(+2*1.0)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG: Reset write counters #2, había 2 PIDs activos, 8,633,026 bytes
+  Top PIDs reseteados: [(34209, 0), (3079, 0)]
+DEBUG WRITE: PID 34209, bytes: 2381
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.90 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 119.527s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 4777
+DEBUG WRITE: PID 34209, bytes: 3434
+DEBUG WRITE: PID 34209, bytes: 3631
+Eventos: 4152 | Alertas: 9 | WRITE: 113(0 alertas) | PIDs activos: 2 | Rate: 33.2/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.90 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 122.698s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG INDICATOR: unlink_burst para PID 34209
+DEBUG CAP: o_trunc limitado: 7.60 → 1.00
+SCORING PID 34209: 4.0/8 pts @ 123.399s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.30 → 1.00
+SCORING PID 34209: 4.0/8 pts @ 124.324s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.00 → 1.00
+SCORING PID 34209: 4.0/8 pts @ 125.084s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+Eventos: 4340 | Alertas: 22 | WRITE: 116(0 alertas) | PIDs activos: 2 | Rate: 33.7/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 4.0/8 pts @ 125.662s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2344
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 4.0/8 pts @ 129.646s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+Eventos: 4528 | Alertas: 22 | WRITE: 121(0 alertas) | PIDs activos: 2 | Rate: 33.6/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 4.0/8 pts @ 132.804s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 3.1/8 pts @ 134.731s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.50 → 1.00
+SCORING PID 34209: 3.1/8 pts @ 136.126s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 3.1/8 pts @ 138.368s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+Eventos: 4716 | Alertas: 22 | WRITE: 123(0 alertas) | PIDs activos: 2 | Rate: 33.1/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 3.1/8 pts @ 140.801s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 3.1/8 pts @ 143.078s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 2.2/8 pts @ 145.572s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), unlink_burst(+3*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 2.2/8 pts @ 146.620s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), unlink_burst(+3*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+Eventos: 4904 | Alertas: 22 | WRITE: 129(0 alertas) | PIDs activos: 2 | Rate: 32.6/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 2.2/8 pts @ 148.995s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), unlink_burst(+3*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 2.2/8 pts @ 150.909s [decay: o_trunc(+1*0.4), unlink_burst(+3*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 152.609s [decay: chmod_burst(+2*1.0)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 153.706s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+Eventos: 5095 | Alertas: 23 | WRITE: 135(0 alertas) | PIDs activos: 2 | Rate: 32.4/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 155.632s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 157.659s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+Eventos: 5283 | Alertas: 27 | WRITE: 138(0 alertas) | PIDs activos: 2 | Rate: 32.3/s
+DEBUG WRITE: PID 3079, bytes: 2344
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 11 ops, 23,623 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 12 ops, 25,323 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2424
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 13 ops, 27,023 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 5471 | Alertas: 27 | WRITE: 146(0 alertas) | PIDs activos: 2 | Rate: 32.2/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 14 ops, 28,723 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 15 ops, 30,423 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 16 ops, 32,123 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 17 ops, 33,823 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 5660 | Alertas: 29 | WRITE: 153(0 alertas) | PIDs activos: 2 | Rate: 32.0/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 18 ops, 35,523 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 19 ops, 37,223 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: Reset write counters #3, había 2 PIDs activos, 110,941 bytes
+  Top PIDs reseteados: [(34209, 0), (3079, 0)]
+DEBUG WRITE: PID 34209, bytes: 1700
+Eventos: 5850 | Alertas: 29 | WRITE: 160(0 alertas) | PIDs activos: 1 | Rate: 31.8/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 6038 | Alertas: 29 | WRITE: 167(0 alertas) | PIDs activos: 2 | Rate: 31.7/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 13093, bytes: 1286
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 13093, bytes: 9571
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 6226 | Alertas: 46 | WRITE: 173(0 alertas) | PIDs activos: 3 | Rate: 32.2/s
+DEBUG WRITE: PID 13093, bytes: 4096
+DEBUG WRITE: PID 13093, bytes: 4096
+DEBUG WRITE: PID 13093, bytes: 4096
+DEBUG WRITE: PID 13093, bytes: 4096
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2429
+Eventos: 6414 | Alertas: 46 | WRITE: 180(0 alertas) | PIDs activos: 3 | Rate: 32.9/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 6605 | Alertas: 46 | WRITE: 183(0 alertas) | PIDs activos: 3 | Rate: 33.3/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 6793 | Alertas: 46 | WRITE: 186(0 alertas) | PIDs activos: 3 | Rate: 33.9/s
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 6981 | Alertas: 46 | WRITE: 190(0 alertas) | PIDs activos: 3 | Rate: 34.6/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+SCORING PID 34209: 1.0/8 pts @ 199.605s [decay: o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 305152
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 2.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 200.715s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 369664
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 3.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 201.429s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 904192
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 4.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 202.198s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 273408
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 203.607s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 63488
+DEBUG WRITE: PID 34209, bytes: 879616
+DEBUG: _check_write_burst PID 34209: 11 ops, 2,804,020 bytes (umbral: 50 ops, 20MB)
+Eventos: 7169 | Alertas: 46 | WRITE: 198(0 alertas) | PIDs activos: 3 | Rate: 34.6/s
+DEBUG WRITE: PID 34209, bytes: 359424
+DEBUG: _check_write_burst PID 34209: 12 ops, 3,163,444 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 284672
+DEBUG: _check_write_burst PID 34209: 13 ops, 3,448,116 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 587776
+DEBUG: _check_write_burst PID 34209: 14 ops, 4,035,892 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 19456
+DEBUG: _check_write_burst PID 34209: 15 ops, 4,055,348 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 734208
+DEBUG: _check_write_burst PID 34209: 16 ops, 4,789,556 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 210.159s [decay: o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 47104
+DEBUG: _check_write_burst PID 34209: 17 ops, 4,836,660 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 211.502s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 588800
+DEBUG: _check_write_burst PID 34209: 18 ops, 5,425,460 bytes (umbral: 50 ops, 20MB)
+Eventos: 7357 | Alertas: 46 | WRITE: 208(0 alertas) | PIDs activos: 3 | Rate: 34.2/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 212.159s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 53248
+DEBUG: _check_write_burst PID 34209: 19 ops, 5,478,708 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 212.971s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 844800
+DEBUG: _check_write_burst PID 34209: 20 ops, 6,323,508 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2344
+DEBUG WRITE: PID 3079, bytes: 2344
+Eventos: 7548 | Alertas: 46 | WRITE: 214(0 alertas) | PIDs activos: 3 | Rate: 34.1/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.90 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 220.480s [decay: o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 7736 | Alertas: 46 | WRITE: 217(0 alertas) | PIDs activos: 3 | Rate: 34.0/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 226.044s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 227.328s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 229.947s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 7924 | Alertas: 46 | WRITE: 219(0 alertas) | PIDs activos: 3 | Rate: 33.9/s
+DEBUG WRITE: PID 3079, bytes: 2424
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 233.282s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.30 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 234.858s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 237.227s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 8112 | Alertas: 46 | WRITE: 222(0 alertas) | PIDs activos: 3 | Rate: 33.6/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 238.371s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 239.814s [decay: chmod_burst(+2*1.0)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 240.496s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 2669
+DEBUG: Reset write counters #4, había 3 PIDs activos, 6,444,077 bytes
+  Top PIDs reseteados: [(34209, 0), (13093, 0), (3079, 0)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1047
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.20 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 244.104s [decay: o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 2186
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.90 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 245.315s [decay: o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 4359
+DEBUG WRITE: PID 34209, bytes: 2804
+Eventos: 8303 | Alertas: 46 | WRITE: 230(0 alertas) | PIDs activos: 2 | Rate: 33.3/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 247.347s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 2560
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 2522
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 249.098s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+Eventos: 8491 | Alertas: 52 | WRITE: 235(0 alertas) | PIDs activos: 2 | Rate: 33.5/s
+DEBUG MIRAI CHECK: comm=cron, url='', has_url=True
+DEBUG MIRAI CHECK: comm=sh, url='', has_url=True
+Eventos: 8687 | Alertas: 62 | WRITE: 235(0 alertas) | PIDs activos: 2 | Rate: 34.3/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 251.442s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 8867 | Alertas: 68 | WRITE: 238(0 alertas) | PIDs activos: 2 | Rate: 34.7/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 254.650s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 255.473s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 257.433s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+Eventos: 9055 | Alertas: 68 | WRITE: 242(0 alertas) | PIDs activos: 2 | Rate: 34.5/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 260.076s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 262.953s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 265.528s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2344
+Eventos: 9246 | Alertas: 68 | WRITE: 246(0 alertas) | PIDs activos: 2 | Rate: 34.2/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 267.648s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 268.920s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 271.305s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 273.357s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+Eventos: 9434 | Alertas: 68 | WRITE: 253(0 alertas) | PIDs activos: 2 | Rate: 34.0/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 276.210s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG: _check_write_burst PID 34209: 11 ops, 22,947 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 278.761s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 9622 | Alertas: 68 | WRITE: 261(0 alertas) | PIDs activos: 2 | Rate: 34.1/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 280.124s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG: _check_write_burst PID 34209: 12 ops, 24,147 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 280.733s [decay: chmod_burst(+2*1.0)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 281.662s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 283.808s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 9810 | Alertas: 72 | WRITE: 266(0 alertas) | PIDs activos: 2 | Rate: 34.1/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 13 ops, 25,847 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 14 ops, 27,547 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 15 ops, 29,247 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 10001 | Alertas: 73 | WRITE: 273(0 alertas) | PIDs activos: 2 | Rate: 33.9/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 16 ops, 30,947 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2344
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 17 ops, 32,647 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 18 ops, 34,347 bytes (umbral: 50 ops, 20MB)
+Eventos: 10189 | Alertas: 73 | WRITE: 280(0 alertas) | PIDs activos: 2 | Rate: 33.7/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 19 ops, 36,047 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG: Reset write counters #5, había 2 PIDs activos, 133,866 bytes
+  Top PIDs reseteados: [(34209, 0), (3079, 0)]
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 10377 | Alertas: 73 | WRITE: 289(0 alertas) | PIDs activos: 2 | Rate: 33.6/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 10565 | Alertas: 73 | WRITE: 296(0 alertas) | PIDs activos: 2 | Rate: 33.5/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+Eventos: 10756 | Alertas: 73 | WRITE: 302(0 alertas) | PIDs activos: 2 | Rate: 33.5/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 10944 | Alertas: 73 | WRITE: 306(0 alertas) | PIDs activos: 2 | Rate: 33.8/s
+DEBUG WRITE: PID 3079, bytes: 2429
+Eventos: 11132 | Alertas: 73 | WRITE: 307(0 alertas) | PIDs activos: 2 | Rate: 34.3/s
+Eventos: 11320 | Alertas: 73 | WRITE: 307(0 alertas) | PIDs activos: 2 | Rate: 34.6/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2344
+DEBUG WRITE: PID 3079, bytes: 2429
+Eventos: 11511 | Alertas: 73 | WRITE: 310(0 alertas) | PIDs activos: 2 | Rate: 35.0/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+SCORING PID 34209: 1.0/8 pts @ 328.082s [decay: o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 30720
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 2.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 329.440s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 613376
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 11699 | Alertas: 73 | WRITE: 315(0 alertas) | PIDs activos: 2 | Rate: 35.1/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 3.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 330.331s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 378880
+DEBUG: _check_write_burst PID 34209: 11 ops, 1,036,576 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 4.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 331.143s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 904192
+DEBUG: _check_write_burst PID 34209: 12 ops, 1,940,768 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 332.545s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 449536
+DEBUG: _check_write_burst PID 34209: 13 ops, 2,390,304 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 582656
+DEBUG: _check_write_burst PID 34209: 14 ops, 2,972,960 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 240640
+DEBUG: _check_write_burst PID 34209: 15 ops, 3,213,600 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 466944
+DEBUG: _check_write_burst PID 34209: 16 ops, 3,680,544 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 11887 | Alertas: 73 | WRITE: 325(0 alertas) | PIDs activos: 2 | Rate: 35.0/s
+DEBUG WRITE: PID 34209, bytes: 362496
+DEBUG: _check_write_burst PID 34209: 17 ops, 4,043,040 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 434176
+DEBUG: _check_write_burst PID 34209: 18 ops, 4,477,216 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 339.272s [decay: o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 499712
+DEBUG: _check_write_burst PID 34209: 19 ops, 4,976,928 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 340.698s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 569344
+DEBUG: _check_write_burst PID 34209: 20 ops, 5,546,272 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 341.229s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 630784
+DEBUG: _check_write_burst PID 34209: 21 ops, 6,177,056 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 342.302s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 97280
+DEBUG: _check_write_burst PID 34209: 22 ops, 6,274,336 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 343.447s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 918528
+DEBUG: _check_write_burst PID 34209: 23 ops, 7,192,864 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 12075 | Alertas: 73 | WRITE: 336(0 alertas) | PIDs activos: 2 | Rate: 34.8/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.60 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 349.471s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+Eventos: 12263 | Alertas: 73 | WRITE: 339(0 alertas) | PIDs activos: 2 | Rate: 34.8/s
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 352.239s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 12452 | Alertas: 73 | WRITE: 344(0 alertas) | PIDs activos: 2 | Rate: 34.6/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2424
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 361.248s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG: Reset write counters #6, había 2 PIDs activos, 7,293,559 bytes
+  Top PIDs reseteados: [(34209, 0), (3079, 0)]
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 12642 | Alertas: 73 | WRITE: 350(0 alertas) | PIDs activos: 1 | Rate: 34.5/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 363.624s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 364.905s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 365.514s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 366.597s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 367.495s [decay: chmod_burst(+2*1.0)]
+DEBUG WRITE: PID 34209, bytes: 2089
+DEBUG WRITE: PID 34209, bytes: 1091
+DEBUG WRITE: PID 34209, bytes: 3135
+Eventos: 12830 | Alertas: 73 | WRITE: 356(0 alertas) | PIDs activos: 2 | Rate: 34.4/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.90 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 372.458s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 3651
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 3866
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.20 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 374.536s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 4374
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.90 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 375.504s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 4953
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.30 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 376.859s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.30 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 376.860s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+Eventos: 13020 | Alertas: 78 | WRITE: 363(0 alertas) | PIDs activos: 2 | Rate: 34.3/s
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 13206 | Alertas: 85 | WRITE: 367(0 alertas) | PIDs activos: 2 | Rate: 34.4/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.90 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 382.721s [decay: o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.30 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 384.663s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 386.462s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 387.050s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+Eventos: 13397 | Alertas: 85 | WRITE: 370(0 alertas) | PIDs activos: 2 | Rate: 34.2/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 389.017s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2344
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 392.825s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 13585 | Alertas: 85 | WRITE: 374(0 alertas) | PIDs activos: 2 | Rate: 34.2/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 394.744s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 396.780s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 397.813s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 399.793s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DB: Guardados 91 UNLINK, 32 CHMOD
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 13773 | Alertas: 85 | WRITE: 380(0 alertas) | PIDs activos: 2 | Rate: 34.0/s
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG: _check_write_burst PID 34209: 11 ops, 27,959 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 403.396s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DB: Guardados 91 UNLINK, 34 CHMOD
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG: _check_write_burst PID 34209: 12 ops, 29,159 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 405.252s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 405.252s [decay: chmod_burst(+2*1.0)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 407.208s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 407.930s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 13961 | Alertas: 88 | WRITE: 386(0 alertas) | PIDs activos: 2 | Rate: 34.0/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 410.151s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 13 ops, 30,859 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 14 ops, 32,559 bytes (umbral: 50 ops, 20MB)
+Eventos: 14150 | Alertas: 90 | WRITE: 391(0 alertas) | PIDs activos: 2 | Rate: 34.0/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 15 ops, 34,259 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 16 ops, 35,959 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 17 ops, 37,659 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 14340 | Alertas: 90 | WRITE: 399(0 alertas) | PIDs activos: 2 | Rate: 34.0/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 18 ops, 39,359 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 19 ops, 41,059 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: Reset write counters #7, había 2 PIDs activos, 127,096 bytes
+  Top PIDs reseteados: [(34209, 0), (3079, 0)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+Eventos: 14528 | Alertas: 90 | WRITE: 407(0 alertas) | PIDs activos: 2 | Rate: 33.8/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 14716 | Alertas: 90 | WRITE: 415(0 alertas) | PIDs activos: 2 | Rate: 33.7/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 34209, bytes: 1700
+Eventos: 14906 | Alertas: 90 | WRITE: 421(0 alertas) | PIDs activos: 2 | Rate: 33.7/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 15095 | Alertas: 90 | WRITE: 423(0 alertas) | PIDs activos: 2 | Rate: 33.9/s
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 15283 | Alertas: 90 | WRITE: 425(0 alertas) | PIDs activos: 2 | Rate: 34.3/s
+DEBUG WRITE: PID 3079, bytes: 2429
+Eventos: 15471 | Alertas: 90 | WRITE: 426(0 alertas) | PIDs activos: 2 | Rate: 34.5/s
+Eventos: 15659 | Alertas: 90 | WRITE: 426(0 alertas) | PIDs activos: 2 | Rate: 34.8/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 3079, bytes: 2429
+Eventos: 15853 | Alertas: 90 | WRITE: 429(0 alertas) | PIDs activos: 2 | Rate: 35.1/s
+DEBUG INDICATOR: o_trunc para PID 34209
+SCORING PID 34209: 1.0/8 pts @ 449.894s [decay: o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 626688
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 2.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 451.393s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 606208
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 3.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 452.519s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 785408
+DEBUG: _check_write_burst PID 34209: 11 ops, 2,031,904 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 4.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 453.122s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 227328
+DEBUG: _check_write_burst PID 34209: 12 ops, 2,259,232 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 454.251s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 702464
+DEBUG: _check_write_burst PID 34209: 13 ops, 2,961,696 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 191488
+DEBUG: _check_write_burst PID 34209: 14 ops, 3,153,184 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 16038 | Alertas: 90 | WRITE: 438(0 alertas) | PIDs activos: 2 | Rate: 34.9/s
+DEBUG WRITE: PID 34209, bytes: 12288
+DEBUG: _check_write_burst PID 34209: 15 ops, 3,165,472 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 632832
+DEBUG: _check_write_burst PID 34209: 16 ops, 3,798,304 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 252928
+DEBUG: _check_write_burst PID 34209: 17 ops, 4,051,232 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 746496
+DEBUG: _check_write_burst PID 34209: 18 ops, 4,797,728 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 459.938s [decay: o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 730112
+DEBUG: _check_write_burst PID 34209: 19 ops, 5,527,840 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 835584
+DEBUG: _check_write_burst PID 34209: 20 ops, 6,363,424 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 461.974s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 703488
+DEBUG: _check_write_burst PID 34209: 21 ops, 7,066,912 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 16226 | Alertas: 90 | WRITE: 448(0 alertas) | PIDs activos: 2 | Rate: 34.8/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 463.284s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 455680
+DEBUG: _check_write_burst PID 34209: 22 ops, 7,522,592 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 463.905s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 689152
+DEBUG: _check_write_burst PID 34209: 23 ops, 8,211,744 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 16414 | Alertas: 91 | WRITE: 453(0 alertas) | PIDs activos: 2 | Rate: 34.8/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.90 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 470.391s [decay: o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.60 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 471.823s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 474.310s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+Eventos: 16602 | Alertas: 92 | WRITE: 458(0 alertas) | PIDs activos: 2 | Rate: 34.7/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 477.108s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2344
+Eventos: 16793 | Alertas: 92 | WRITE: 461(0 alertas) | PIDs activos: 2 | Rate: 34.6/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 484.529s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG: Reset write counters #8, había 2 PIDs activos, 8,295,635 bytes
+  Top PIDs reseteados: [(34209, 0), (3079, 0)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 485.948s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 487.085s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 488.058s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 488.883s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 488.883s [decay: chmod_burst(+2*1.0)]
+Eventos: 16981 | Alertas: 92 | WRITE: 465(0 alertas) | PIDs activos: 1 | Rate: 34.5/s
+DEBUG WRITE: PID 34209, bytes: 4158
+DEBUG WRITE: PID 34209, bytes: 4606
+DEBUG WRITE: PID 34209, bytes: 2167
+DEBUG WRITE: PID 34209, bytes: 3411
+DEBUG WRITE: PID 34209, bytes: 3884
+DEBUG WRITE: PID 34209, bytes: 3063
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.60 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 495.304s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.30 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 496.354s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 2459
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 17169 | Alertas: 92 | WRITE: 475(0 alertas) | PIDs activos: 2 | Rate: 34.4/s
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 498.291s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 498.291s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 499.113s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+Eventos: 17357 | Alertas: 104 | WRITE: 478(0 alertas) | PIDs activos: 2 | Rate: 34.5/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2344
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 506.525s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+Eventos: 17548 | Alertas: 104 | WRITE: 484(0 alertas) | PIDs activos: 2 | Rate: 34.4/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 507.536s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 508.454s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 509.936s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 510.895s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 17736 | Alertas: 104 | WRITE: 489(0 alertas) | PIDs activos: 2 | Rate: 34.4/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2344
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 517.160s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 519.292s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2424
+Eventos: 17924 | Alertas: 104 | WRITE: 494(0 alertas) | PIDs activos: 2 | Rate: 34.3/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 521.398s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 522.736s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 523.819s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 527.282s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG: _check_write_burst PID 34209: 11 ops, 28,548 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG: _check_write_burst PID 34209: 12 ops, 29,748 bytes (umbral: 50 ops, 20MB)
+Eventos: 18114 | Alertas: 104 | WRITE: 501(0 alertas) | PIDs activos: 2 | Rate: 34.0/s
+DEBUG WRITE: PID 3079, bytes: 2344
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 530.658s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 530.658s [decay: chmod_burst(+2*1.0)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 532.143s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 532.888s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 535.140s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 18303 | Alertas: 108 | WRITE: 504(0 alertas) | PIDs activos: 2 | Rate: 34.0/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 13 ops, 31,448 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 14 ops, 33,148 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 18491 | Alertas: 109 | WRITE: 511(0 alertas) | PIDs activos: 2 | Rate: 34.0/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 15 ops, 34,848 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 16 ops, 36,548 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2427
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: Reset write counters #9, había 2 PIDs activos, 127,270 bytes
+  Top PIDs reseteados: [(34209, 0), (3079, 0)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+Eventos: 18679 | Alertas: 109 | WRITE: 519(0 alertas) | PIDs activos: 2 | Rate: 33.9/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 1, bytes: 2900
+DEBUG WRITE: PID 2200, bytes: 4096
+DEBUG WRITE: PID 2200, bytes: 1368
+Eventos: 18872 | Alertas: 109 | WRITE: 525(0 alertas) | PIDs activos: 4 | Rate: 34.0/s
+Eventos: 19072 | Alertas: 109 | WRITE: 525(0 alertas) | PIDs activos: 4 | Rate: 34.3/s
+DEBUG MIRAI CHECK: comm=(sa1), url='', has_url=True
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG MIRAI CHECK: comm=sa1, url='', has_url=True
+DEBUG WRITE: PID 34283, bytes: 1360
+Eventos: 19267 | Alertas: 109 | WRITE: 527(0 alertas) | PIDs activos: 5 | Rate: 34.7/s
+Eventos: 19452 | Alertas: 109 | WRITE: 527(0 alertas) | PIDs activos: 5 | Rate: 35.0/s
+Eventos: 19646 | Alertas: 109 | WRITE: 527(0 alertas) | PIDs activos: 5 | Rate: 35.3/s
+Eventos: 19846 | Alertas: 109 | WRITE: 527(0 alertas) | PIDs activos: 5 | Rate: 35.7/s
+Eventos: 20025 | Alertas: 109 | WRITE: 527(0 alertas) | PIDs activos: 5 | Rate: 36.0/s
+Eventos: 20215 | Alertas: 109 | WRITE: 527(0 alertas) | PIDs activos: 5 | Rate: 36.3/s
+Eventos: 20412 | Alertas: 109 | WRITE: 527(0 alertas) | PIDs activos: 5 | Rate: 36.7/s
+Eventos: 20565 | Alertas: 109 | WRITE: 527(0 alertas) | PIDs activos: 5 | Rate: 37.0/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+Eventos: 20753 | Alertas: 109 | WRITE: 534(0 alertas) | PIDs activos: 5 | Rate: 36.8/s
+DEBUG WRITE: PID 3079, bytes: 2424
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 11 ops, 18,700 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 20944 | Alertas: 109 | WRITE: 543(0 alertas) | PIDs activos: 5 | Rate: 36.7/s
+DEBUG WRITE: PID 3079, bytes: 2426
+Eventos: 21135 | Alertas: 109 | WRITE: 544(0 alertas) | PIDs activos: 5 | Rate: 36.9/s
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 3079, bytes: 2429
+Eventos: 21323 | Alertas: 109 | WRITE: 546(0 alertas) | PIDs activos: 5 | Rate: 37.1/s
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 21508 | Alertas: 109 | WRITE: 547(0 alertas) | PIDs activos: 5 | Rate: 37.3/s
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 21699 | Alertas: 109 | WRITE: 548(0 alertas) | PIDs activos: 5 | Rate: 37.6/s
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 3079, bytes: 2429
+Eventos: 21889 | Alertas: 109 | WRITE: 550(0 alertas) | PIDs activos: 5 | Rate: 37.8/s
+DEBUG INDICATOR: o_trunc para PID 34209
+SCORING PID 34209: 1.0/8 pts @ 578.251s [decay: o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 673792
+DEBUG: _check_write_burst PID 34209: 12 ops, 692,492 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 2.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 579.464s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 475136
+DEBUG: _check_write_burst PID 34209: 13 ops, 1,167,628 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 22075 | Alertas: 109 | WRITE: 553(0 alertas) | PIDs activos: 5 | Rate: 37.9/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 3.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 580.140s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 39936
+DEBUG: _check_write_burst PID 34209: 14 ops, 1,207,564 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 4.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 580.687s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 68608
+DEBUG: _check_write_burst PID 34209: 15 ops, 1,276,172 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 581.483s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 461824
+DEBUG: _check_write_burst PID 34209: 16 ops, 1,737,996 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 441344
+DEBUG: _check_write_burst PID 34209: 17 ops, 2,179,340 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 198656
+DEBUG: _check_write_burst PID 34209: 18 ops, 2,377,996 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 649216
+DEBUG: _check_write_burst PID 34209: 19 ops, 3,027,212 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 726016
+DEBUG: _check_write_burst PID 34209: 20 ops, 3,753,228 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 621568
+DEBUG: _check_write_burst PID 34209: 21 ops, 4,374,796 bytes (umbral: 50 ops, 20MB)
+Eventos: 22263 | Alertas: 109 | WRITE: 565(0 alertas) | PIDs activos: 5 | Rate: 37.8/s
+DEBUG WRITE: PID 34209, bytes: 678912
+DEBUG: _check_write_burst PID 34209: 22 ops, 5,053,708 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 708608
+DEBUG: _check_write_burst PID 34209: 23 ops, 5,762,316 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 497664
+DEBUG: _check_write_burst PID 34209: 24 ops, 6,259,980 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 589.335s [decay: o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 582656
+DEBUG: _check_write_burst PID 34209: 25 ops, 6,842,636 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 590.002s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 371712
+DEBUG: _check_write_burst PID 34209: 26 ops, 7,214,348 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 22451 | Alertas: 109 | WRITE: 572(0 alertas) | PIDs activos: 5 | Rate: 37.7/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 596.764s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+Eventos: 22642 | Alertas: 109 | WRITE: 577(0 alertas) | PIDs activos: 5 | Rate: 37.7/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.60 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 599.723s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 601.223s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+Eventos: 22830 | Alertas: 109 | WRITE: 580(0 alertas) | PIDs activos: 5 | Rate: 37.7/s
+DEBUG WRITE: PID 3079, bytes: 2344
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG: Reset write counters #10, había 5 PIDs activos, 7,310,387 bytes
+  Top PIDs reseteados: [(34209, 0), (1, 0), (3079, 0)]
+DEBUG WRITE: PID 3079, bytes: 2344
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 607.410s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 609.798s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+Eventos: 23018 | Alertas: 109 | WRITE: 583(0 alertas) | PIDs activos: 1 | Rate: 37.5/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.90 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 612.900s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.90 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 614.030s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.90 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 614.841s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 616.518s [decay: chmod_burst(+2*1.0)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.30 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 617.767s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 1744
+DEBUG WRITE: PID 34209, bytes: 3097
+Eventos: 23206 | Alertas: 109 | WRITE: 589(0 alertas) | PIDs activos: 2 | Rate: 37.3/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.90 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 620.390s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 4047
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1043
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.30 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 623.105s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 1948
+DEBUG WRITE: PID 3079, bytes: 2426
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 624.577s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 4665
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 625.169s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+Eventos: 23397 | Alertas: 109 | WRITE: 598(0 alertas) | PIDs activos: 2 | Rate: 37.2/s
+DEBUG WRITE: PID 34209, bytes: 2247
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 628.344s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 23585 | Alertas: 121 | WRITE: 601(0 alertas) | PIDs activos: 2 | Rate: 37.3/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 630.986s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 633.858s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 635.356s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 635.954s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 23773 | Alertas: 121 | WRITE: 605(0 alertas) | PIDs activos: 2 | Rate: 37.2/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 640.602s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 642.767s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+Eventos: 23961 | Alertas: 121 | WRITE: 609(0 alertas) | PIDs activos: 2 | Rate: 37.0/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 645.311s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 647.211s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 649.185s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 24152 | Alertas: 121 | WRITE: 613(0 alertas) | PIDs activos: 2 | Rate: 36.9/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 651.585s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 653.935s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 656.461s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG: _check_write_burst PID 34209: 11 ops, 23,591 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 657.801s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG: _check_write_burst PID 34209: 12 ops, 24,791 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 659.253s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 659.253s [decay: chmod_burst(+2*1.0)]
+Eventos: 24340 | Alertas: 121 | WRITE: 621(0 alertas) | PIDs activos: 2 | Rate: 36.8/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 661.899s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 664.524s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 24528 | Alertas: 126 | WRITE: 626(0 alertas) | PIDs activos: 2 | Rate: 36.7/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 13 ops, 26,491 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: Reset write counters #11, había 2 PIDs activos, 107,764 bytes
+  Top PIDs reseteados: [(34209, 0), (3079, 0)]
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+Eventos: 24716 | Alertas: 126 | WRITE: 632(0 alertas) | PIDs activos: 2 | Rate: 36.6/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2344
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+Eventos: 24904 | Alertas: 126 | WRITE: 639(0 alertas) | PIDs activos: 2 | Rate: 36.5/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 34209, bytes: 1700
+Eventos: 25095 | Alertas: 126 | WRITE: 645(0 alertas) | PIDs activos: 2 | Rate: 36.3/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 11 ops, 18,700 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 12 ops, 20,400 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 13 ops, 22,100 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 14 ops, 23,800 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+Eventos: 25283 | Alertas: 126 | WRITE: 653(0 alertas) | PIDs activos: 2 | Rate: 36.3/s
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 25474 | Alertas: 126 | WRITE: 654(0 alertas) | PIDs activos: 2 | Rate: 36.4/s
+Eventos: 25659 | Alertas: 126 | WRITE: 654(0 alertas) | PIDs activos: 2 | Rate: 36.6/s
+DEBUG WRITE: PID 3079, bytes: 2429
+Eventos: 25852 | Alertas: 126 | WRITE: 655(0 alertas) | PIDs activos: 2 | Rate: 36.8/s
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 26038 | Alertas: 126 | WRITE: 656(0 alertas) | PIDs activos: 2 | Rate: 37.0/s
+Eventos: 26226 | Alertas: 126 | WRITE: 656(0 alertas) | PIDs activos: 2 | Rate: 37.1/s
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 26417 | Alertas: 126 | WRITE: 657(0 alertas) | PIDs activos: 2 | Rate: 37.3/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+SCORING PID 34209: 1.0/8 pts @ 706.265s [decay: o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 73728
+DEBUG: _check_write_burst PID 34209: 15 ops, 97,528 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 2.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 707.765s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 431104
+DEBUG: _check_write_burst PID 34209: 16 ops, 528,632 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 3.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 708.697s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 524288
+DEBUG: _check_write_burst PID 34209: 17 ops, 1,052,920 bytes (umbral: 50 ops, 20MB)
+Eventos: 26602 | Alertas: 126 | WRITE: 662(0 alertas) | PIDs activos: 2 | Rate: 37.3/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 4.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 709.915s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 87040
+DEBUG: _check_write_burst PID 34209: 18 ops, 1,139,960 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 711.318s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 647168
+DEBUG: _check_write_burst PID 34209: 19 ops, 1,787,128 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 297984
+DEBUG: _check_write_burst PID 34209: 20 ops, 2,085,112 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 584704
+DEBUG: _check_write_burst PID 34209: 21 ops, 2,669,816 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 635904
+DEBUG: _check_write_burst PID 34209: 22 ops, 3,305,720 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 539648
+DEBUG: _check_write_burst PID 34209: 23 ops, 3,845,368 bytes (umbral: 50 ops, 20MB)
+Eventos: 26793 | Alertas: 126 | WRITE: 671(0 alertas) | PIDs activos: 2 | Rate: 37.3/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 716.474s [decay: o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 841728
+DEBUG: _check_write_burst PID 34209: 24 ops, 4,687,096 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 696320
+DEBUG: _check_write_burst PID 34209: 25 ops, 5,383,416 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 718.843s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 587776
+DEBUG: _check_write_burst PID 34209: 26 ops, 5,971,192 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 720.073s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 460800
+DEBUG: _check_write_burst PID 34209: 27 ops, 6,431,992 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 721.028s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 443392
+DEBUG: _check_write_burst PID 34209: 28 ops, 6,875,384 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 721.874s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 428032
+DEBUG: _check_write_burst PID 34209: 29 ops, 7,303,416 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 26981 | Alertas: 126 | WRITE: 681(0 alertas) | PIDs activos: 2 | Rate: 37.2/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.90 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 727.088s [decay: o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG: Reset write counters #12, había 2 PIDs activos, 7,367,786 bytes
+  Top PIDs reseteados: [(34209, 0), (3079, 0)]
+Eventos: 27169 | Alertas: 126 | WRITE: 685(0 alertas) | PIDs activos: 1 | Rate: 37.2/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 729.502s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2344
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 733.071s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 734.448s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 27358 | Alertas: 126 | WRITE: 688(0 alertas) | PIDs activos: 1 | Rate: 37.1/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 736.376s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 737.478s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 740.634s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 27548 | Alertas: 126 | WRITE: 691(0 alertas) | PIDs activos: 1 | Rate: 36.9/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 743.675s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 744.206s [decay: chmod_burst(+2*1.0)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 745.629s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 747.002s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 3383
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 747.650s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 3181
+Eventos: 27736 | Alertas: 126 | WRITE: 696(0 alertas) | PIDs activos: 2 | Rate: 36.9/s
+DEBUG WRITE: PID 34209, bytes: 3131
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 751.082s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 4749
+DEBUG WRITE: PID 34209, bytes: 1389
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 3573
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 754.158s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2429
+Eventos: 27924 | Alertas: 132 | WRITE: 703(0 alertas) | PIDs activos: 2 | Rate: 36.9/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 755.802s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 758.012s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 758.558s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2424
+Eventos: 28112 | Alertas: 140 | WRITE: 706(0 alertas) | PIDs activos: 2 | Rate: 36.8/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 762.002s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 764.875s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 766.962s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+Eventos: 28302 | Alertas: 140 | WRITE: 710(0 alertas) | PIDs activos: 2 | Rate: 36.7/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 769.192s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 771.130s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 773.028s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2427
+Eventos: 28491 | Alertas: 142 | WRITE: 713(0 alertas) | PIDs activos: 2 | Rate: 36.6/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 775.469s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 777.517s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 779.332s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 28679 | Alertas: 142 | WRITE: 722(0 alertas) | PIDs activos: 2 | Rate: 36.6/s
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 782.119s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 783.543s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG: _check_write_burst PID 34209: 11 ops, 25,406 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 784.483s [decay: chmod_burst(+2*1.0)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 786.034s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+Eventos: 28867 | Alertas: 144 | WRITE: 727(0 alertas) | PIDs activos: 2 | Rate: 36.6/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 787.524s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG: Reset write counters #13, había 2 PIDs activos, 101,736 bytes
+  Top PIDs reseteados: [(34209, 0), (3079, 0)]
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 29055 | Alertas: 147 | WRITE: 732(0 alertas) | PIDs activos: 2 | Rate: 36.5/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+Eventos: 29246 | Alertas: 147 | WRITE: 739(0 alertas) | PIDs activos: 2 | Rate: 36.4/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 29434 | Alertas: 147 | WRITE: 746(0 alertas) | PIDs activos: 2 | Rate: 36.3/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 11 ops, 18,700 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3317, bytes: 1220
+DEBUG WRITE: PID 3317, bytes: 1220
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 12 ops, 20,400 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2345
+Eventos: 29622 | Alertas: 147 | WRITE: 753(0 alertas) | PIDs activos: 3 | Rate: 36.3/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 13 ops, 22,100 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 14 ops, 23,800 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3317, bytes: 1220
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 15 ops, 25,500 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 29810 | Alertas: 147 | WRITE: 760(0 alertas) | PIDs activos: 3 | Rate: 36.2/s
+Eventos: 30003 | Alertas: 147 | WRITE: 760(0 alertas) | PIDs activos: 3 | Rate: 36.4/s
+Eventos: 30189 | Alertas: 147 | WRITE: 760(0 alertas) | PIDs activos: 3 | Rate: 36.6/s
+DEBUG WRITE: PID 3079, bytes: 2345
+Eventos: 30377 | Alertas: 147 | WRITE: 761(0 alertas) | PIDs activos: 3 | Rate: 36.7/s
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 30570 | Alertas: 147 | WRITE: 762(0 alertas) | PIDs activos: 3 | Rate: 36.9/s
+Eventos: 30756 | Alertas: 147 | WRITE: 762(0 alertas) | PIDs activos: 3 | Rate: 37.0/s
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 30947 | Alertas: 147 | WRITE: 763(0 alertas) | PIDs activos: 3 | Rate: 37.2/s
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 31132 | Alertas: 147 | WRITE: 764(0 alertas) | PIDs activos: 3 | Rate: 37.4/s
+DEBUG INDICATOR: o_trunc para PID 34209
+SCORING PID 34209: 1.0/8 pts @ 829.821s [decay: o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 915456
+DEBUG: _check_write_burst PID 34209: 16 ops, 940,956 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 2.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 831.309s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 654336
+DEBUG: _check_write_burst PID 34209: 17 ops, 1,595,292 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 3.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 832.411s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 494592
+DEBUG: _check_write_burst PID 34209: 18 ops, 2,089,884 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 4.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 833.498s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 784384
+DEBUG: _check_write_burst PID 34209: 19 ops, 2,874,268 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 834.901s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 859136
+DEBUG: _check_write_burst PID 34209: 20 ops, 3,733,404 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 31320 | Alertas: 147 | WRITE: 772(0 alertas) | PIDs activos: 3 | Rate: 37.4/s
+DEBUG WRITE: PID 3317, bytes: 1220
+DEBUG WRITE: PID 34209, bytes: 347136
+DEBUG: _check_write_burst PID 34209: 21 ops, 4,080,540 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 167936
+DEBUG: _check_write_burst PID 34209: 22 ops, 4,248,476 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 117760
+DEBUG: _check_write_burst PID 34209: 23 ops, 4,366,236 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 839.867s [decay: o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 369664
+DEBUG: _check_write_burst PID 34209: 24 ops, 4,735,900 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 841.351s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 538624
+DEBUG: _check_write_burst PID 34209: 25 ops, 5,274,524 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 842.501s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 269312
+DEBUG: _check_write_burst PID 34209: 26 ops, 5,543,836 bytes (umbral: 50 ops, 20MB)
+Eventos: 31508 | Alertas: 147 | WRITE: 781(0 alertas) | PIDs activos: 3 | Rate: 37.2/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 843.713s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 559104
+DEBUG: _check_write_burst PID 34209: 27 ops, 6,102,940 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 391168
+DEBUG: _check_write_burst PID 34209: 28 ops, 6,494,108 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 845.622s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 415744
+DEBUG: _check_write_burst PID 34209: 29 ops, 6,909,852 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 721920
+DEBUG: _check_write_burst PID 34209: 30 ops, 7,631,772 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 31699 | Alertas: 147 | WRITE: 789(0 alertas) | PIDs activos: 3 | Rate: 37.2/s
+Eventos: 31896 | Alertas: 156 | WRITE: 789(0 alertas) | PIDs activos: 3 | Rate: 37.4/s
+DEBUG MIRAI CHECK: comm=cron, url='', has_url=True
+DEBUG MIRAI CHECK: comm=sh, url='', has_url=True
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG: Reset write counters #14, había 3 PIDs activos, 7,703,283 bytes
+  Top PIDs reseteados: [(34209, 0), (3317, 0), (3079, 0)]
+Eventos: 32075 | Alertas: 157 | WRITE: 790(0 alertas) | PIDs activos: 1 | Rate: 37.5/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 852.479s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 856.074s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 857.302s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 859.320s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 32263 | Alertas: 157 | WRITE: 795(0 alertas) | PIDs activos: 1 | Rate: 37.4/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 861.395s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2345
+Eventos: 32454 | Alertas: 157 | WRITE: 799(0 alertas) | PIDs activos: 1 | Rate: 37.3/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 867.943s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 868.810s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 869.657s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 870.352s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 870.931s [decay: chmod_burst(+2*1.0)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 871.941s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 4413
+DEBUG WRITE: PID 34209, bytes: 1173
+DEBUG WRITE: PID 34209, bytes: 1456
+Eventos: 32642 | Alertas: 157 | WRITE: 805(0 alertas) | PIDs activos: 2 | Rate: 37.2/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 2045
+DEBUG WRITE: PID 34209, bytes: 3777
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 3942
+DEBUG WRITE: PID 34209, bytes: 4772
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.30 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 878.598s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 3228
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 879.917s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 879.917s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+Eventos: 32830 | Alertas: 158 | WRITE: 814(0 alertas) | PIDs activos: 2 | Rate: 37.2/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 880.592s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 882.629s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 33018 | Alertas: 169 | WRITE: 817(0 alertas) | PIDs activos: 2 | Rate: 37.2/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 889.892s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+Eventos: 33206 | Alertas: 169 | WRITE: 821(0 alertas) | PIDs activos: 2 | Rate: 37.2/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 891.210s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 892.061s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 893.875s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 13093, bytes: 29591
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 896.109s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 13093, bytes: 352146
+Eventos: 33397 | Alertas: 169 | WRITE: 825(0 alertas) | PIDs activos: 3 | Rate: 37.1/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 900.148s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 901.337s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 902.668s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 33585 | Alertas: 169 | WRITE: 832(0 alertas) | PIDs activos: 3 | Rate: 37.0/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 905.127s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG: _check_write_burst PID 34209: 11 ops, 28,406 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 906.610s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG: _check_write_burst PID 34209: 12 ops, 29,606 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG: _check_write_burst PID 34209: 13 ops, 30,806 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 909.789s [decay: chmod_burst(+2*1.0)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.30 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 910.821s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 911.436s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG: Reset write counters #15, había 3 PIDs activos, 486,295 bytes
+  Top PIDs reseteados: [(34209, 0), (13093, 0), (3079, 0)]
+Eventos: 33773 | Alertas: 171 | WRITE: 836(0 alertas) | PIDs activos: 1 | Rate: 36.9/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 913.040s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 34209, bytes: 1700
+Eventos: 33961 | Alertas: 174 | WRITE: 840(0 alertas) | PIDs activos: 2 | Rate: 36.9/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3317, bytes: 1220
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+Eventos: 34152 | Alertas: 174 | WRITE: 847(0 alertas) | PIDs activos: 3 | Rate: 36.8/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 34340 | Alertas: 174 | WRITE: 855(0 alertas) | PIDs activos: 3 | Rate: 36.7/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 11 ops, 18,700 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 12 ops, 20,400 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 13 ops, 22,100 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 14 ops, 23,800 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 34528 | Alertas: 174 | WRITE: 862(0 alertas) | PIDs activos: 3 | Rate: 36.6/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 15 ops, 25,500 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 34719 | Alertas: 174 | WRITE: 865(0 alertas) | PIDs activos: 3 | Rate: 36.7/s
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 34904 | Alertas: 174 | WRITE: 866(0 alertas) | PIDs activos: 3 | Rate: 36.8/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 35095 | Alertas: 174 | WRITE: 868(0 alertas) | PIDs activos: 3 | Rate: 36.9/s
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 35285 | Alertas: 174 | WRITE: 869(0 alertas) | PIDs activos: 3 | Rate: 37.1/s
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 35471 | Alertas: 174 | WRITE: 870(0 alertas) | PIDs activos: 3 | Rate: 37.2/s
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 35659 | Alertas: 174 | WRITE: 872(0 alertas) | PIDs activos: 3 | Rate: 37.4/s
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 35850 | Alertas: 174 | WRITE: 873(0 alertas) | PIDs activos: 3 | Rate: 37.5/s
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 36041 | Alertas: 174 | WRITE: 874(0 alertas) | PIDs activos: 3 | Rate: 37.7/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+SCORING PID 34209: 1.0/8 pts @ 954.667s [decay: o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 512000
+DEBUG: _check_write_burst PID 34209: 16 ops, 537,500 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 2.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 955.804s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 151552
+DEBUG: _check_write_burst PID 34209: 17 ops, 689,052 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 3.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 956.369s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 489472
+DEBUG: _check_write_burst PID 34209: 18 ops, 1,178,524 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 4.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 956.913s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 55296
+DEBUG: _check_write_burst PID 34209: 19 ops, 1,233,820 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 958.205s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 53248
+DEBUG: _check_write_burst PID 34209: 20 ops, 1,287,068 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 36226 | Alertas: 174 | WRITE: 882(0 alertas) | PIDs activos: 3 | Rate: 37.7/s
+DEBUG WRITE: PID 34209, bytes: 549888
+DEBUG: _check_write_burst PID 34209: 21 ops, 1,836,956 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 579584
+DEBUG: _check_write_burst PID 34209: 22 ops, 2,416,540 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 799744
+DEBUG: _check_write_burst PID 34209: 23 ops, 3,216,284 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 384000
+DEBUG: _check_write_burst PID 34209: 24 ops, 3,600,284 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 917504
+DEBUG: _check_write_burst PID 34209: 25 ops, 4,517,788 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 140288
+DEBUG: _check_write_burst PID 34209: 26 ops, 4,658,076 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 36415 | Alertas: 174 | WRITE: 892(0 alertas) | PIDs activos: 3 | Rate: 37.6/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 965.894s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 429056
+DEBUG: _check_write_burst PID 34209: 27 ops, 5,087,132 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 967.142s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 414720
+DEBUG: _check_write_burst PID 34209: 28 ops, 5,501,852 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 967.985s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 530432
+DEBUG: _check_write_burst PID 34209: 29 ops, 6,032,284 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3317, bytes: 1220
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 969.183s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 845824
+DEBUG: _check_write_burst PID 34209: 30 ops, 6,878,108 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 36605 | Alertas: 174 | WRITE: 901(0 alertas) | PIDs activos: 3 | Rate: 37.6/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG: Reset write counters #16, había 3 PIDs activos, 6,964,618 bytes
+  Top PIDs reseteados: [(34209, 0), (3317, 0), (3079, 0)]
+DEBUG WRITE: PID 3079, bytes: 2345
+Eventos: 36793 | Alertas: 174 | WRITE: 904(0 alertas) | PIDs activos: 1 | Rate: 37.6/s
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 977.995s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 979.100s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 979.771s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 36981 | Alertas: 174 | WRITE: 908(0 alertas) | PIDs activos: 1 | Rate: 37.5/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 981.855s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 982.972s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.60 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 989.027s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 37169 | Alertas: 174 | WRITE: 913(0 alertas) | PIDs activos: 1 | Rate: 37.5/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 989.656s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 990.521s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 993.080s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 993.080s [decay: chmod_burst(+2*1.0)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 994.346s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 1227
+DEBUG WRITE: PID 34209, bytes: 2383
+Eventos: 37357 | Alertas: 174 | WRITE: 919(0 alertas) | PIDs activos: 2 | Rate: 37.4/s
+DEBUG WRITE: PID 34209, bytes: 1624
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 4701
+DEBUG WRITE: PID 34209, bytes: 3755
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1000.000s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 4123
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1000.626s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1002.028s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1003.240s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+Eventos: 37548 | Alertas: 175 | WRITE: 926(0 alertas) | PIDs activos: 2 | Rate: 37.3/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1004.724s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 37736 | Alertas: 186 | WRITE: 930(0 alertas) | PIDs activos: 2 | Rate: 37.4/s
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1010.968s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1012.023s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 37924 | Alertas: 186 | WRITE: 934(0 alertas) | PIDs activos: 2 | Rate: 37.3/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1012.993s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1013.628s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1016.334s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 38112 | Alertas: 186 | WRITE: 938(0 alertas) | PIDs activos: 2 | Rate: 37.2/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1022.432s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1024.081s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1025.363s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1026.507s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1027.777s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+Eventos: 38301 | Alertas: 186 | WRITE: 944(0 alertas) | PIDs activos: 2 | Rate: 37.1/s
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG: Reset write counters #17, había 2 PIDs activos, 108,237 bytes
+  Top PIDs reseteados: [(34209, 0), (3079, 0)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1033.030s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 1033.030s [decay: chmod_burst(+2*1.0)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1034.242s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+Eventos: 38491 | Alertas: 187 | WRITE: 950(0 alertas) | PIDs activos: 2 | Rate: 37.1/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1036.542s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1037.943s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1039.297s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 38679 | Alertas: 191 | WRITE: 953(0 alertas) | PIDs activos: 2 | Rate: 37.1/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 38867 | Alertas: 191 | WRITE: 962(0 alertas) | PIDs activos: 2 | Rate: 37.0/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 34209, bytes: 1700
+Eventos: 39055 | Alertas: 191 | WRITE: 970(0 alertas) | PIDs activos: 2 | Rate: 37.0/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 11 ops, 18,200 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 12 ops, 19,900 bytes (umbral: 50 ops, 20MB)
+Eventos: 39246 | Alertas: 191 | WRITE: 976(0 alertas) | PIDs activos: 2 | Rate: 36.9/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 13 ops, 21,600 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 14 ops, 23,300 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 15 ops, 25,000 bytes (umbral: 50 ops, 20MB)
+Eventos: 39434 | Alertas: 191 | WRITE: 982(0 alertas) | PIDs activos: 2 | Rate: 36.9/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 16 ops, 26,700 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3317, bytes: 1220
+Eventos: 39624 | Alertas: 193 | WRITE: 986(0 alertas) | PIDs activos: 3 | Rate: 36.9/s
+Eventos: 39813 | Alertas: 193 | WRITE: 986(0 alertas) | PIDs activos: 3 | Rate: 37.0/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 13093, bytes: 352338
+Eventos: 40000 | Alertas: 193 | WRITE: 988(0 alertas) | PIDs activos: 4 | Rate: 37.2/s
+Eventos: 40189 | Alertas: 193 | WRITE: 988(0 alertas) | PIDs activos: 4 | Rate: 37.3/s
+DEBUG WRITE: PID 3079, bytes: 2429
+Eventos: 40379 | Alertas: 193 | WRITE: 989(0 alertas) | PIDs activos: 4 | Rate: 37.4/s
+DEBUG WRITE: PID 3079, bytes: 2429
+Eventos: 40568 | Alertas: 193 | WRITE: 990(0 alertas) | PIDs activos: 4 | Rate: 37.6/s
+DEBUG WRITE: PID 13093, bytes: 352338
+Eventos: 40758 | Alertas: 193 | WRITE: 991(0 alertas) | PIDs activos: 4 | Rate: 37.7/s
+DEBUG WRITE: PID 3079, bytes: 2429
+Eventos: 40944 | Alertas: 193 | WRITE: 992(0 alertas) | PIDs activos: 4 | Rate: 37.9/s
+DEBUG WRITE: PID 3079, bytes: 2429
+Eventos: 41132 | Alertas: 193 | WRITE: 993(0 alertas) | PIDs activos: 4 | Rate: 38.0/s
+DEBUG INDICATOR: o_trunc para PID 34209
+SCORING PID 34209: 1.0/8 pts @ 1080.646s [decay: o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 371712
+DEBUG: _check_write_burst PID 34209: 17 ops, 398,412 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 2.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1082.125s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 806912
+DEBUG: _check_write_burst PID 34209: 18 ops, 1,205,324 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 3.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1083.003s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 120832
+DEBUG: _check_write_burst PID 34209: 19 ops, 1,326,156 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 4.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1083.829s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 138240
+DEBUG: _check_write_burst PID 34209: 20 ops, 1,464,396 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2426
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1084.600s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 157696
+DEBUG: _check_write_burst PID 34209: 21 ops, 1,622,092 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 412672
+DEBUG: _check_write_burst PID 34209: 22 ops, 2,034,764 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 41320 | Alertas: 193 | WRITE: 1003(0 alertas) | PIDs activos: 4 | Rate: 37.9/s
+DEBUG WRITE: PID 34209, bytes: 270336
+DEBUG: _check_write_burst PID 34209: 23 ops, 2,305,100 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 13093, bytes: 352338
+DEBUG WRITE: PID 13093, bytes: 352338
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 177152
+DEBUG: _check_write_burst PID 34209: 24 ops, 2,482,252 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 615424
+DEBUG: _check_write_burst PID 34209: 25 ops, 3,097,676 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 809984
+DEBUG: _check_write_burst PID 34209: 26 ops, 3,907,660 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1091.248s [decay: o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 499712
+DEBUG: _check_write_burst PID 34209: 27 ops, 4,407,372 bytes (umbral: 50 ops, 20MB)
+Eventos: 41508 | Alertas: 193 | WRITE: 1012(0 alertas) | PIDs activos: 4 | Rate: 37.9/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1092.253s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 531456
+DEBUG: Reset write counters #18, había 4 PIDs activos, 5,894,632 bytes
+  Top PIDs reseteados: [(34209, 0), (13093, 0), (3317, 0)]
+DEBUG WRITE: PID 34209, bytes: 421888
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1093.794s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 235520
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1094.887s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 62464
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2345
+Eventos: 41699 | Alertas: 193 | WRITE: 1020(0 alertas) | PIDs activos: 2 | Rate: 37.9/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.90 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1101.584s [decay: o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.30 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1102.814s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+Eventos: 41887 | Alertas: 193 | WRITE: 1023(0 alertas) | PIDs activos: 2 | Rate: 37.9/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1103.681s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1105.721s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 13093, bytes: 1286
+DEBUG WRITE: PID 13093, bytes: 9571
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 42075 | Alertas: 197 | WRITE: 1029(0 alertas) | PIDs activos: 3 | Rate: 37.9/s
+DEBUG WRITE: PID 13093, bytes: 4096
+DEBUG WRITE: PID 13093, bytes: 4096
+DEBUG WRITE: PID 13093, bytes: 4096
+DEBUG WRITE: PID 13093, bytes: 4096
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1110.221s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1113.646s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 42265 | Alertas: 197 | WRITE: 1037(0 alertas) | PIDs activos: 3 | Rate: 37.8/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1114.652s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1115.291s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1116.317s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 1117.813s [decay: chmod_burst(+2*1.0)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 34209, bytes: 4275
+DEBUG WRITE: PID 34209, bytes: 3990
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1120.994s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 42453 | Alertas: 197 | WRITE: 1042(0 alertas) | PIDs activos: 3 | Rate: 37.8/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 4838
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1124.074s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 4035
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1125.100s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 3214
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1125.633s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1126.578s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+Eventos: 42642 | Alertas: 203 | WRITE: 1048(0 alertas) | PIDs activos: 3 | Rate: 37.7/s
+DB: Guardados 271 UNLINK, 90 CHMOD
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1131.308s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+Eventos: 42830 | Alertas: 209 | WRITE: 1049(0 alertas) | PIDs activos: 3 | Rate: 37.7/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3317, bytes: 1220
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1134.699s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3317, bytes: 1220
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1135.516s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1136.477s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1137.321s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 43018 | Alertas: 209 | WRITE: 1054(0 alertas) | PIDs activos: 4 | Rate: 37.7/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1142.622s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 43208 | Alertas: 209 | WRITE: 1058(0 alertas) | PIDs activos: 4 | Rate: 37.6/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1146.476s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 13093, bytes: 352386
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1148.874s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1149.694s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+Eventos: 43400 | Alertas: 209 | WRITE: 1061(0 alertas) | PIDs activos: 4 | Rate: 37.6/s
+DEBUG MIRAI CHECK: comm=cron, url='', has_url=True
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 43585 | Alertas: 219 | WRITE: 1062(0 alertas) | PIDs activos: 4 | Rate: 37.8/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1150.546s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG: _check_write_burst PID 34209: 11 ops, 1,274,080 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 1, bytes: 2900
+Eventos: 43781 | Alertas: 219 | WRITE: 1064(0 alertas) | PIDs activos: 5 | Rate: 37.9/s
+DEBUG MIRAI CHECK: comm=(sa1), url='', has_url=True
+DEBUG MIRAI CHECK: comm=sa1, url='', has_url=True
+DEBUG WRITE: PID 34419, bytes: 1360
+DEBUG: Reset write counters #19, había 5 PIDs activos, 1,732,780 bytes
+  Top PIDs reseteados: [(34209, 0), (1, 0), (13093, 0)]
+Eventos: 43973 | Alertas: 219 | WRITE: 1065(0 alertas) | PIDs activos: 1 | Rate: 38.1/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1153.206s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1200
+Eventos: 44152 | Alertas: 219 | WRITE: 1069(0 alertas) | PIDs activos: 3 | Rate: 38.1/s
+DEBUG WRITE: PID 13093, bytes: 352386
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1157.309s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 1200
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 1158.765s [decay: chmod_burst(+2*1.0)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1160.072s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1160.872s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1161.665s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+Eventos: 44340 | Alertas: 222 | WRITE: 1074(0 alertas) | PIDs activos: 4 | Rate: 38.1/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 10.50 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1163.735s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 44528 | Alertas: 224 | WRITE: 1080(0 alertas) | PIDs activos: 4 | Rate: 38.0/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 44716 | Alertas: 224 | WRITE: 1087(0 alertas) | PIDs activos: 4 | Rate: 37.9/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 11 ops, 17,200 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 12 ops, 18,900 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 13 ops, 20,600 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 14 ops, 22,300 bytes (umbral: 50 ops, 20MB)
+Eventos: 44904 | Alertas: 224 | WRITE: 1095(0 alertas) | PIDs activos: 4 | Rate: 37.8/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 15 ops, 24,000 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2427
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 16 ops, 25,700 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 45095 | Alertas: 224 | WRITE: 1102(0 alertas) | PIDs activos: 4 | Rate: 37.8/s
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 17 ops, 27,400 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 1700
+DEBUG: _check_write_burst PID 34209: 18 ops, 29,100 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 45286 | Alertas: 224 | WRITE: 1106(0 alertas) | PIDs activos: 4 | Rate: 37.8/s
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 45474 | Alertas: 224 | WRITE: 1107(0 alertas) | PIDs activos: 4 | Rate: 37.9/s
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 13093, bytes: 29701
+Eventos: 45664 | Alertas: 224 | WRITE: 1109(0 alertas) | PIDs activos: 4 | Rate: 38.0/s
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 45850 | Alertas: 224 | WRITE: 1110(0 alertas) | PIDs activos: 4 | Rate: 38.2/s
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 46038 | Alertas: 224 | WRITE: 1111(0 alertas) | PIDs activos: 4 | Rate: 38.3/s
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 46226 | Alertas: 224 | WRITE: 1112(0 alertas) | PIDs activos: 4 | Rate: 38.4/s
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 46414 | Alertas: 224 | WRITE: 1113(0 alertas) | PIDs activos: 4 | Rate: 38.5/s
+Eventos: 46605 | Alertas: 224 | WRITE: 1113(0 alertas) | PIDs activos: 4 | Rate: 38.6/s
+DEBUG WRITE: PID 13093, bytes: 352386
+DEBUG WRITE: PID 13093, bytes: 352386
+Eventos: 46795 | Alertas: 224 | WRITE: 1115(0 alertas) | PIDs activos: 4 | Rate: 38.7/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+SCORING PID 34209: 1.0/8 pts @ 1206.957s [decay: o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 425984
+DEBUG: _check_write_burst PID 34209: 19 ops, 455,084 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 2.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1208.252s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 794624
+DEBUG: _check_write_burst PID 34209: 20 ops, 1,249,708 bytes (umbral: 50 ops, 20MB)
+Eventos: 46981 | Alertas: 224 | WRITE: 1118(0 alertas) | PIDs activos: 4 | Rate: 38.8/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 3.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1209.719s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 313344
+DEBUG: _check_write_burst PID 34209: 21 ops, 1,563,052 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 4.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1211.099s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 322560
+DEBUG: _check_write_burst PID 34209: 22 ops, 1,885,612 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1212.170s [decay: o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 361472
+DEBUG: _check_write_burst PID 34209: 23 ops, 2,247,084 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 579584
+DEBUG: Reset write counters #20, había 4 PIDs activos, 3,411,907 bytes
+  Top PIDs reseteados: [(34209, 0), (34419, 0), (13093, 0)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 34209, bytes: 150528
+Eventos: 47169 | Alertas: 224 | WRITE: 1127(0 alertas) | PIDs activos: 2 | Rate: 38.7/s
+DEBUG WRITE: PID 34209, bytes: 295936
+DEBUG WRITE: PID 13093, bytes: 352402
+DEBUG WRITE: PID 34209, bytes: 356352
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 34209, bytes: 689152
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 5.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1217.470s [decay: o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 24576
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1218.708s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 319488
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.10 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1219.779s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 211968
+DEBUG WRITE: PID 34209, bytes: 679936
+Eventos: 47357 | Alertas: 224 | WRITE: 1137(0 alertas) | PIDs activos: 3 | Rate: 38.7/s
+DEBUG WRITE: PID 3317, bytes: 1220
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1221.858s [decay: o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*1.0)]
+DEBUG WRITE: PID 34209, bytes: 457728
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 13093, bytes: 352402
+Eventos: 47548 | Alertas: 224 | WRITE: 1143(0 alertas) | PIDs activos: 4 | Rate: 38.7/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 13093, bytes: 352402
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.20 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1227.375s [decay: o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.90 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1228.112s [decay: o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.30 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1229.569s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 47736 | Alertas: 224 | WRITE: 1148(0 alertas) | PIDs activos: 4 | Rate: 38.7/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 13093, bytes: 352402
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1237.782s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 47924 | Alertas: 224 | WRITE: 1154(0 alertas) | PIDs activos: 4 | Rate: 38.6/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 6.80 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1240.358s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.40 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1241.278s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 7.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1242.537s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1243.800s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG INDICATOR: chmod_burst para PID 34047
+SCORING PID 34047: 2.0/8 pts @ 1244.829s [decay: chmod_burst(+2*1.0)]
+Eventos: 48112 | Alertas: 224 | WRITE: 1158(0 alertas) | PIDs activos: 4 | Rate: 38.5/s
+DEBUG WRITE: PID 34209, bytes: 4240
+DEBUG: _check_write_burst PID 34209: 11 ops, 3,769,488 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1247.820s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 1447
+DEBUG: _check_write_burst PID 34209: 12 ops, 3,770,935 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 1052
+DEBUG: _check_write_burst PID 34209: 13 ops, 3,771,987 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1250.399s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 8.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1251.711s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 1180
+DEBUG: _check_write_burst PID 34209: 14 ops, 3,773,167 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+Eventos: 48303 | Alertas: 224 | WRITE: 1166(0 alertas) | PIDs activos: 4 | Rate: 38.5/s
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.00 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1252.670s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 4677
+DEBUG: _check_write_burst PID 34209: 15 ops, 3,777,844 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: o_trunc para PID 34209
+DEBUG CAP: o_trunc limitado: 9.70 → 1.00
+SCORING PID 34209: 1.0/8 pts @ 1253.895s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 2184
+DEBUG: _check_write_burst PID 34209: 16 ops, 3,780,028 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+Eventos: 48491 | Alertas: 236 | WRITE: 1170(0 alertas) | PIDs activos: 4 | Rate: 38.5/s
+DEBUG WRITE: PID 34209, bytes: 8192
+DEBUG: _check_write_burst PID 34209: 17 ops, 3,788,220 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8187
+DEBUG: _check_write_burst PID 34209: 18 ops, 3,796,407 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8172
+DEBUG: _check_write_burst PID 34209: 19 ops, 3,804,579 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8177
+DEBUG: _check_write_burst PID 34209: 20 ops, 3,812,756 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8182
+DEBUG: _check_write_burst PID 34209: 21 ops, 3,820,938 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8192
+DEBUG: _check_write_burst PID 34209: 22 ops, 3,829,130 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8190
+DEBUG: _check_write_burst PID 34209: 23 ops, 3,837,320 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8186
+DEBUG: _check_write_burst PID 34209: 24 ops, 3,845,506 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8184
+DEBUG: _check_write_burst PID 34209: 25 ops, 3,853,690 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8192
+DEBUG: _check_write_burst PID 34209: 26 ops, 3,861,882 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8185
+DEBUG: _check_write_burst PID 34209: 27 ops, 3,870,067 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8181
+DEBUG: _check_write_burst PID 34209: 28 ops, 3,878,248 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8192
+DEBUG: _check_write_burst PID 34209: 29 ops, 3,886,440 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8191
+DEBUG: _check_write_burst PID 34209: 30 ops, 3,894,631 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8191
+DEBUG: _check_write_burst PID 34209: 31 ops, 3,902,822 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8191
+DEBUG: _check_write_burst PID 34209: 32 ops, 3,911,013 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8155
+DEBUG: _check_write_burst PID 34209: 33 ops, 3,919,168 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8192
+DEBUG: _check_write_burst PID 34209: 34 ops, 3,927,360 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8176
+DEBUG: _check_write_burst PID 34209: 35 ops, 3,935,536 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8191
+DEBUG: _check_write_burst PID 34209: 36 ops, 3,943,727 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8166
+DEBUG: _check_write_burst PID 34209: 37 ops, 3,951,893 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8169
+DEBUG: _check_write_burst PID 34209: 38 ops, 3,960,062 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8191
+DEBUG: _check_write_burst PID 34209: 39 ops, 3,968,253 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8185
+DEBUG: _check_write_burst PID 34209: 40 ops, 3,976,438 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8180
+DEBUG: _check_write_burst PID 34209: 41 ops, 3,984,618 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34207, bytes: 1080
+DEBUG WRITE: PID 34209, bytes: 8191
+DEBUG: _check_write_burst PID 34209: 42 ops, 3,992,809 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8165
+DEBUG: _check_write_burst PID 34209: 43 ops, 4,000,974 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8191
+DEBUG: _check_write_burst PID 34209: 44 ops, 4,009,165 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8181
+DEBUG: _check_write_burst PID 34209: 45 ops, 4,017,346 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8191
+DEBUG: _check_write_burst PID 34209: 46 ops, 4,025,537 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8189
+DEBUG: _check_write_burst PID 34209: 47 ops, 4,033,726 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8182
+DEBUG: _check_write_burst PID 34209: 48 ops, 4,041,908 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8167
+DEBUG: _check_write_burst PID 34209: 49 ops, 4,050,075 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8187
+DEBUG: _check_write_burst PID 34209: 50 ops, 4,058,262 bytes (umbral: 50 ops, 20MB)
+DEBUG INDICATOR: massive_write para PID 34209
+DEBUG CAP: o_trunc limitado: 9.30 → 1.00
+SCORING PID 34209: 4.0/8 pts @ 1257.405s [decay: o_trunc(+1*0.4), o_trunc(+1*0.4), o_trunc(+1*0.7), o_trunc(+1*0.7), o_trunc(+1*0.7)]
+DEBUG WRITE: PID 34209, bytes: 8158
+DEBUG: _check_write_burst PID 34209: 51 ops, 4,066,420 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8167
+DEBUG: _check_write_burst PID 34209: 52 ops, 4,074,587 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8192
+DEBUG: _check_write_burst PID 34209: 53 ops, 4,082,779 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8192
+DEBUG: _check_write_burst PID 34209: 54 ops, 4,090,971 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 8189
+DEBUG: _check_write_burst PID 34209: 55 ops, 4,099,160 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 34209, bytes: 2292
+DEBUG: _check_write_burst PID 34209: 56 ops, 4,101,452 bytes (umbral: 50 ops, 20MB)
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 48679 | Alertas: 236 | WRITE: 1215(0 alertas) | PIDs activos: 5 | Rate: 38.5/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 48867 | Alertas: 236 | WRITE: 1220(0 alertas) | PIDs activos: 5 | Rate: 38.4/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG: Reset write counters #21, había 5 PIDs activos, 5,599,334 bytes
+  Top PIDs reseteados: [(34209, 0), (13093, 0), (3079, 0)]
+DEBUG WRITE: PID 3079, bytes: 2345
+Eventos: 49056 | Alertas: 236 | WRITE: 1224(0 alertas) | PIDs activos: 1 | Rate: 38.3/s
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 49246 | Alertas: 236 | WRITE: 1229(0 alertas) | PIDs activos: 1 | Rate: 38.2/s
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 13093, bytes: 352402
+Eventos: 49434 | Alertas: 236 | WRITE: 1237(0 alertas) | PIDs activos: 2 | Rate: 38.2/s
+DEBUG WRITE: PID 13093, bytes: 352402
+DEBUG WRITE: PID 3079, bytes: 2429
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2428
+Eventos: 49622 | Alertas: 236 | WRITE: 1245(0 alertas) | PIDs activos: 2 | Rate: 38.1/s
+DEBUG WRITE: PID 3079, bytes: 2345
+DEBUG WRITE: PID 3079, bytes: 2428
+DEBUG WRITE: PID 3079, bytes: 2336
+DEBUG WRITE: PID 3079, bytes: 2429
+
+============================================================
+ESTADISTICAS FINALES - DETECTOR WRITE CORREGIDO
+Tiempo ejecución: 1306.7 segundos
+Total eventos: 49786
+Rate promedio: 38.1 eventos/segundo
+Rate máximo: 1300 eventos/segundo
+Total alertas: 236
+
+ EVENTOS WRITE CORREGIDOS:
+   Eventos WRITE: 1249
+   Bytes escritos totales: 79,429,675
+   Alertas por escritura: 0
+   Procesos únicos con WRITE: 10
+   Checks de burst realizados: 466
+   Resets de contadores: 21
+
+  CONFIGURACIÓN WRITE:
+   Umbral operaciones: 50
+   Umbral bytes: 20,971,520 (20MB)
+   Reset interval: 60s
+   Alert cooldown: 30s
+
+ CONTADORES ACTIVOS AL FINAL:
+   PIDs activos WRITE: 2
+      PID 3079: 25 ops, 59,285 bytes
+      PID 13093: 2 ops, 704,804 bytes
+
+ ANÁLISIS WRITE:
+   Promedio bytes/write: 63594.6
+   Tasa de alerta WRITE: 0.0000%
+    SIN ALERTAS: Umbrales muy altos o anti-spam muy agresivo
+
+ OTRAS MÉTRICAS:
+   Hash scans realizados: 0
+   Malware detectado: 0
+   Archivos limpios: 0
+   Errores: 0
+
+ Alertas por tipo:
+   network_suspicious: 32
+   critical_file: 203
+   mass_deletion: 1
+
+ DIAGNÓSTICO AUTOMÁTICO:
+     Sin alertas WRITE con 1249 eventos
+   Umbrales conservadores funcionando (466 checks)
+
+ NUEVAS SYSCALLS:
+   Eventos UNLINK: 304
+   Eventos CHMOD: 100
+   Borrados masivos detectados: 0
+   Escalaciones de privilegios: 0
+   Patrones ransomware: 1
+   Eventos CONNECT: 59
+   Eventos PTRACE: 0
+   Eventos MMAP: 832
+   Eventos CHOWN: 0
+   Alertas de red: 32
+   Alertas de inyección: 0
+   Alertas de memoria: 0
+   Alertas de ownership: 0
+
+ SISTEMA DE SCORING UNIFICADO:
+   Umbral configurado: >8 puntos
+   Ventana temporal: 10s
+   PIDs que alcanzaron umbral: 0
+   Familias que alcanzaron umbral: 0
+   Modo verbose: ACTIVO
+
+ COBERTURA MITRE ATT&CK:
+   Técnicas MITRE cubiertas: 19
+   Técnicas: T1036.005, T1053.003, T1055.001, T1055.008, T1059, T1083, T1105, T1106, T1222.002, T1485, T1486, T1489, T1543, T1543.002, T1546.004, T1548.001, T1565.001, T1574.006, T1608.001
+   Cobertura táctica:
+     - Persistence: T1548
+     - Defense Evasion: T1036, T1055
+     - Impact: T1485, T1486, T1489
+
+ DETECCIÓN DE PERSISTENCIA:
+   Intentos de persistencia: 0
+   Modificaciones crontab: 0
+   Servicios systemd: 0
+   Modificaciones .bashrc: 0
+   LD_PRELOAD hijacking: 0
+
+ RESPONSE ENGINE:
+   Modo configurado: MONITOR
+
+ PROCESS TREE:
+   PID 13093 (FSBroker13666): Score=0
+      → 34.107.243.93:443
+      → 34.107.243.93:443
+      → 151.101.133.91:0
+
+ MÉTRICAS DE DETECCIÓN:
+   Tiempo hasta primer evento sospechoso: 35.499s
+   Total alertas en timeline: 236
+   Total indicadores detectados: 796
+   Métricas exportadas a /tmp/detection_metrics.json
+============================================================
+Base de datos guardada y cerrada
