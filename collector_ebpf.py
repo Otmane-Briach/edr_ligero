@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-collector_fixed.py - Collector con syscalls expandidas DEFINITIVO
-FIX: unlinkat usa 'flag' no 'flags'
+collector_fixed.py - Collector con syscalls expandidas 
 """
 
 from bcc import BPF
@@ -40,7 +39,7 @@ def signal_handler(sig, frame):
         print(f"   Database size: {stats['hash_database_size']}", file=sys.stderr)
     sys.exit(0)
 
-# PROGRAMA eBPF CORREGIDO - unlinkat usa 'flag' no 'flags'
+# PROGRAMA eBPF 
 BPF_PROGRAM = r"""
 #include <uapi/linux/ptrace.h>
 #include <linux/sched.h>
@@ -69,8 +68,8 @@ static __always_inline u32 get_ppid(void) {
     return ppid;
 }
 
-// SYSCALL: execve - MODIFICADO para capturar argumentos
-// SYSCALL: execve - MODIFICADO para capturar argumentos
+
+// SYSCALL: execve 
 TRACEPOINT_PROBE(syscalls, sys_enter_execve) {
     struct event_t data = {};
     u64 pid_tgid = bpf_get_current_pid_tgid();
@@ -85,7 +84,7 @@ TRACEPOINT_PROBE(syscalls, sys_enter_execve) {
     // Capturar el ejecutable
     bpf_probe_read_user_str(&data.filename, sizeof(data.filename), (void*)args->filename);
     
-    // NUEVO: Verificar si el EJECUTABLE es wget o curl
+   
     // Buscar "wget" o "curl" en el path del ejecutable
     const char *first_arg_ptr = NULL;
     bpf_probe_read_user(&first_arg_ptr, sizeof(first_arg_ptr), 
@@ -142,7 +141,7 @@ TRACEPOINT_PROBE(syscalls, sys_enter_write) {
     return 0;
 }
 
-// NUEVA SYSCALL: unlink
+// SYSCALL: unlink
 TRACEPOINT_PROBE(syscalls, sys_enter_unlink) {
     struct event_t data = {};
     u64 pid_tgid = bpf_get_current_pid_tgid();
@@ -159,7 +158,7 @@ TRACEPOINT_PROBE(syscalls, sys_enter_unlink) {
     return 0;
 }
 
-// NUEVA SYSCALL: unlinkat - CORREGIDO: usa 'flag' no 'flags'
+//SYSCALL: unlinkat
 TRACEPOINT_PROBE(syscalls, sys_enter_unlinkat) {
     struct event_t data = {};
     u64 pid_tgid = bpf_get_current_pid_tgid();
@@ -176,7 +175,7 @@ TRACEPOINT_PROBE(syscalls, sys_enter_unlinkat) {
     return 0;
 }
 
-// NUEVA SYSCALL: chmod
+// SYSCALL: chmod
 TRACEPOINT_PROBE(syscalls, sys_enter_chmod) {
     struct event_t data = {};
     u64 pid_tgid = bpf_get_current_pid_tgid();
@@ -193,7 +192,7 @@ TRACEPOINT_PROBE(syscalls, sys_enter_chmod) {
     return 0;
 }
 
-// NUEVA SYSCALL: fchmodat
+//  SYSCALL: fchmodat
 TRACEPOINT_PROBE(syscalls, sys_enter_fchmodat) {
     struct event_t data = {};
     u64 pid_tgid = bpf_get_current_pid_tgid();
@@ -210,7 +209,7 @@ TRACEPOINT_PROBE(syscalls, sys_enter_fchmodat) {
     return 0;
 }
 
-// NUEVA SYSCALL: connect con IP:Puerto
+// SYSCALL: connect con IP:Puerto
 TRACEPOINT_PROBE(syscalls, sys_enter_connect) {
     struct event_t data = {};
     u64 pid_tgid = bpf_get_current_pid_tgid();
@@ -245,7 +244,7 @@ TRACEPOINT_PROBE(syscalls, sys_enter_connect) {
     return 0;
 }
 
-// NUEVA SYSCALL: ptrace
+// SYSCALL: ptrace
 TRACEPOINT_PROBE(syscalls, sys_enter_ptrace) {
     struct event_t data = {};
     u64 pid_tgid = bpf_get_current_pid_tgid();
@@ -262,7 +261,7 @@ TRACEPOINT_PROBE(syscalls, sys_enter_ptrace) {
     return 0;
 }
 
-// NUEVA SYSCALL: mmap
+// SYSCALL: mmap
 TRACEPOINT_PROBE(syscalls, sys_enter_mmap) {
     struct event_t data = {};
     u64 pid_tgid = bpf_get_current_pid_tgid();
@@ -279,7 +278,7 @@ TRACEPOINT_PROBE(syscalls, sys_enter_mmap) {
     return 0;
 }
 
-// NUEVA SYSCALL: chown
+// SYSCALL: chown
 TRACEPOINT_PROBE(syscalls, sys_enter_fchownat) {
     struct event_t data = {};
     u64 pid_tgid = bpf_get_current_pid_tgid();
@@ -296,7 +295,7 @@ TRACEPOINT_PROBE(syscalls, sys_enter_fchownat) {
     return 0;
 }
 
-// NUEVA SYSCALL: rename (versión antigua)
+// SYSCALL: rename 
 TRACEPOINT_PROBE(syscalls, sys_enter_rename) {
     struct event_t data = {};
     u64 pid_tgid = bpf_get_current_pid_tgid();
@@ -315,7 +314,7 @@ TRACEPOINT_PROBE(syscalls, sys_enter_rename) {
     return 0;
 }
 
-// NUEVA SYSCALL: renameat (versión intermedia)
+// SYSCALL: renameat (versión intermedia)
 TRACEPOINT_PROBE(syscalls, sys_enter_renameat) {
     struct event_t data = {};
     u64 pid_tgid = bpf_get_current_pid_tgid();
@@ -334,7 +333,7 @@ TRACEPOINT_PROBE(syscalls, sys_enter_renameat) {
     return 0;
 }
 
-// NUEVA SYSCALL: renameat2 (versión moderna, la más común)
+// NUEVA SYSCALL: renameat2 
 TRACEPOINT_PROBE(syscalls, sys_enter_renameat2) {
     struct event_t data = {};
     u64 pid_tgid = bpf_get_current_pid_tgid();
@@ -473,11 +472,11 @@ def handle_event(cpu, data, size):
         }
 
         if event.type == 0:  # EXEC
-            # DEBUG: Ver qué estamos recibiendo
+            # DEBUG: Ver qu estamos recibiendo
             if '|' in filename:
                 print(f"DEBUG EXEC: comm={comm}, filename={filename[:100]}", file=sys.stderr)
             
-            # NUEVO: Separar comando y URL si hay pipe
+            # Separar comando y URL si hay pipe
             if '|' in filename:
                 parts = filename.split('|', 1)
                 exe_name = parts[0].split('/')[-1]
@@ -671,7 +670,7 @@ def main():
     args = p.parse_args()
 
     if args.verbose:
-        print("🚀 EDR Collector EXPANDIDO iniciando...", file=sys.stderr)
+        print(" EDR Collector EXPANDIDO iniciando...", file=sys.stderr)
         print("   SYSCALLS MONITORIZADAS:", file=sys.stderr)
         print("     • execve - Ejecución de procesos", file=sys.stderr)
         print("     • openat - Apertura de archivos", file=sys.stderr)
@@ -695,7 +694,7 @@ def main():
         b["events"].open_perf_buffer(handle_event)
 
         if args.verbose:
-            print("✓ eBPF compilado exitosamente", file=sys.stderr)
+            print(" eBPF compilado exitosamente", file=sys.stderr)
             print("Monitorizando syscalls (9 tipos activos)...", file=sys.stderr)
             
         while True:
