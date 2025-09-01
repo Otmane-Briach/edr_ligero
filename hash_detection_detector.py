@@ -1401,7 +1401,7 @@ class ThreatDetectorFixed:
     def _check_double_extension_pattern(self, event: Event) -> Optional[str]:
         """Detectar doble extensión con contexto para reducir falsos positivos"""
         if '.encrptd' in event.path.lower():
-            print(f"DEBUG PATH WITH ENCRPTD BORRAME: {event.path}", file=sys.stderr)
+            print(f"DEBUG PATH WITH ENCRPTD: {event.path}", file=sys.stderr)
         if not event.path:
             return None
         
