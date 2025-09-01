@@ -1,0 +1,48 @@
+================================================
+BENCHMARK I/O - INFORME TÉCNICO
+================================================
+Fecha: Sat Aug 30 10:08:19 PM CEST 2025
+Sistema: edr-VMware-Virtual-Platform
+Kernel: 6.14.0-27-generic
+
+CONFIGURACIÓN DEL TEST
+----------------------
+Muestras: 3
+Test 1: 100 archivos pequeños (crear/leer/borrar)
+Test 2: Archivo de 10MB (escribir/leer/copiar)
+Test 3: Operaciones mixtas (directorios/mover/borrar)
+
+RESULTADOS POR OPERACIÓN
+-------------------------
+Archivos pequeños:
+  Sin EDR: 0.62s | Con EDR: 1.68s
+  Overhead: 170.00%
+
+Archivo grande:
+  Sin EDR: 0.06s | Con EDR: 0.10s
+  Overhead: 66.00%
+
+Operaciones mixtas:
+  Sin EDR: 0.32s | Con EDR: 0.79s
+  Overhead: 146.00%
+
+RESULTADO TOTAL
+---------------
+Tiempo sin EDR:             1.06 segundos
+Tiempo con EDR:             2.74 segundos
+Overhead temporal:          158.00%
+
+MÉTRICAS DE CPU
+---------------
+Collector (eBPF):           0.32%
+Detector (Python):          14.13%
+Total EDR:                  14.45%
+Pico máximo:                0.00%
+
+
+ARCHIVOS GENERADOS
+------------------
+Tiempos: benchmark_results/io/*/time_*.txt
+CPU: benchmark_results/io/*/cpu_*.csv
+Resumen: benchmark_results/io/summary.txt
+================================================
