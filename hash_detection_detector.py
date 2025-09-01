@@ -1796,8 +1796,7 @@ class ThreatDetectorFixed:
                 return alert
         
         return None
-    """cuidado,check_multi_arch_files() busca archivos creados localmente, pero el Mirai falló al descargar (Network unreachable). 
-    Solo se detectaría si los archivos se hubieran descargado exitosamente. """   
+      
     
     def _check_multi_arch_files(self, event: Event) -> Optional[str]:
         """Detectar creación de archivos con mismo nombre y diferentes arquitecturas"""
