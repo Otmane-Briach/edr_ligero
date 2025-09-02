@@ -28,4 +28,4 @@ Este proyecto implementa un sistema de **detección y respuesta para endpoints (
 ```bash
 git clone https://github.com/tuusuario/edr-ebpf.git
 cd edr-ebpf
-python3 collector.py
+sudo -v && sudo python3 collector.py 2>/tmp/edr.err | python3 hash_detection_detector.py > ~/Desktop/mini-edr-ebp/edr_alerts.log 2>&1
